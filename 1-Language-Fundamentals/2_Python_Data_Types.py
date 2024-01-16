@@ -232,6 +232,108 @@ n = int(c)
 print(n)
 '''
 # bool --> int
+'''
 print(int(True))
 print(int(False))
+'''
 
+
+# float()
+'''
+# bool --> float
+print(float(True))
+'''
+# complex --> float
+# print(float(10+20j))
+
+# str --> float
+'''
+print(float('10'))
+print(float('10.10'))
+# print(float('0b1010'))
+# print(float('ten'))
+'''
+# int --> float
+'''
+print(float(10))
+print(float(0b10101))
+print(float(0x1010))
+'''
+
+
+# complex()
+'''
+c = 10+20j
+print(c.imag)
+print(c.real)
+'''
+'''
+print(complex(2))
+print(complex(True))
+print(complex('10'))
+print(complex('10.5'))
+'''
+'''
+c = complex(1,2)
+print(c)
+print(complex(10.5,20.1))
+# print(complex('10','20'))
+'''
+
+
+# bool()
+'''
+print((bool()))
+print(bool(''))
+print(bool(0))
+'''
+# int --> float
+'''
+print(bool(0))
+print(bool(1))
+print(bool(0.00000000001))
+print(bool(-1))
+'''
+# complex --> bool
+'''
+print(bool(0+0j))
+print(bool(1+0j))
+print(bool(0+1j))
+'''
+# float --> bool
+'''
+print(bool(0.0))
+print(bool(10.5*0))
+print(bool(0.0000001))
+'''
+# str --> bool
+'''
+print(bool('True'))
+print(bool('False'))
+print(bool('yes'))
+print(bool('no'))
+print(bool(''))       #*****
+print(bool(' '))
+'''
+
+
+# str()
+'''
+print(str(123))
+print(str(123.321))
+print(str(10+20j))
+print(str(0b1111))
+print(str(True))
+'''
+
+# Fundamental Data Types vs Immutability
+a = 10
+b = a
+print(id(a))
+print(id(b))
+a = 11
+print(id(a))
+print(id(b))
+b += 1
+print(id(a))
+print(id(b))
