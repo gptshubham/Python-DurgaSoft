@@ -5,46 +5,46 @@ x = 10
 # print(x)
 
 # type()
-"""
+'''
 type_of_x = type(x)
 print(type_of_x)
-"""
+'''
 
 # id()
-"""
+'''
 id_of_x = id(x)
 print(id_of_x)
-"""
+'''
 
-"""
+'''
 y = -10
 print(type(y))
 z = 1010010001000010000001000000001111112548554785544475511225444474
 print(type(z))
-"""
+'''
 
 # int --> base --> Decimal, Binary, Octal, Hexa Decimal
 # 1. Decimal --> most commonly used form
-"""
+'''
 a = 1111
 print(a)
 print(type(a))
-"""
+'''
 # 2. Binary --> prefix --> 0b or 0B
-"""
+'''
 b = 0B1111
 print(b)
 print(type(b))
-"""
+'''
 # 3. Octal (0-7) --> prefix --> 0o or 0O
-"""
+'''
 c = 0o123
 print(c)
 print(type(c))
 print(0b1111 + 0o123)
-"""
+'''
 # 4. Hexa Decimal
-"""
+'''
 d = 0xface
 print(d)
 d = 0Xface
@@ -53,27 +53,27 @@ d = 0xCAB
 print(d)
 # d = 0xBeer
 # print(d)
-"""
+'''
 # Base Conversion
 # to binary
-"""
+'''
 print(bin(10))
 print(bin(0b10))
 print(bin(0x123))
-"""
+'''
 # to octal
-"""
+'''
 print(oct(10))
 print(oct(0b10))
 print(oct(0x10))
-"""
+'''
 
 # Session 9 : Python Data Types II
 
 # print(hex(10))
 
 # float data type
-"""
+'''
 f = 1.234
 # print(type(f))
 # Exponential Form --> float data type
@@ -84,37 +84,37 @@ print(f)
 
 f = 12.0
 print(type(f))
-"""
+'''
 
 # complex data type --> (skipped)
 
 # boolean daya type
-"""
+'''
 t = True
 print(type(t))
 f = False
 print(type(f))
-"""
+'''
 
-"""
+'''
 age = 20
 if age>18:
     print("You are eligible for driving !")
-"""
-"""
+'''
+'''
 print(True)
 print(True + True)
 print(False - True)
 print(True * False)
-"""
+'''
 
 # string data type
-"""
+'''
 s = "shubham"
 print(s)
 s = 'Kumar'
 print(s)
-"""
+'''
 # multi line strings
 '''
 s = """Shubham
@@ -327,13 +327,75 @@ print(str(True))
 '''
 
 # Fundamental Data Types vs Immutability
+'''
 a = 10
 b = a
 print(id(a))
 print(id(b))
+print(a is b)
+
 a = 11
 print(id(a))
 print(id(b))
+print(a is b)
+
 b += 1
 print(id(a))
 print(id(b))
+print(a is b)
+
+a = 'shubham'
+b = 'shubham'
+print(a is b)
+
+a = 22.22
+b = 22.22
+print(a is b)
+'''
+
+# Mutability
+'''
+L = [10,20,30,40]
+print(L,id(L))
+L[0] = 50
+print(L,id(L))
+'''
+'''
+L = [10,20,30,40]
+L2 = L
+L[0] = 90
+print(L,L2)
+print(L2 is L)
+L2[1] = 70
+print(L,L2)
+print(L2 is L)
+'''
+'''
+L = [10,20,30,40]
+L2 = [10,20,30,40]
+print(L is L2)
+L[0] = 90
+print(L,L2)
+'''
+
+
+# Collection --> list, tuple, set, frozenset, dict, bytes, bytearray, range
+
+# List
+'''
+L = [10,10.5,'shubham',True,10]
+print(L)
+print(type(L))
+print(L[0])
+print(L[-1])
+print(L[1:3])
+L.append('Kumar')
+L.append('Gupta')
+print(L)
+print(len(L))
+'''
+
+# set
+s = {10,10.5,'shubham',True,10}
+print(s)
+print(type(s))
