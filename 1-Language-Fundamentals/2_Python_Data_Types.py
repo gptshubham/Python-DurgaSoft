@@ -395,7 +395,62 @@ print(L)
 print(len(L))
 '''
 
-# set
-s = {10,10.5,'shubham',True,10}
+# Tuple
+'''
+t = (10,10.5,'shubham',True,10)
+print(t,type(t))
+print(t[2])
+print(t[-1])
+print(t[1:4])
+# t[0] = 7777
+# t.append(50)
+# t.remove(10.5)
+# Empty Tuple
+t = ()
+print(t,type(t))
+# Single Valued Tuple
+t = (10)
+print(t,type(t))              # *** Surprised!
+t = (10,)
+print(t,type(t))
+t = (10,20,30,40,)
+print(t,type(t))
+t = 10,20,30,40
+print(t,type(t))             # ***** Surprised!
+'''
+
+# Sets
+'''
+s = {10,10.5,10,'shubham',10,True,10,10}
 print(s)
+print(type(s))           # Duplicates are not allowed
+# print(s[0])
+# print(s[0:4])
+# adding elements to set
+# add()
+s.add(50)
+print(s)
+s.add(60)
+print(s)
+s.remove(50)
+print(s)
+'''
+# Empty Set                     # *** Surprise!
+'''
+s = {}
+print(s,type(s))
+s = set({})
+print(s)
+print(len(s))
 print(type(s))
+'''
+
+# frozenset
+'''
+s = {10,20,30,40}
+fs = frozenset(s)
+print(s,type(s))
+print(fs,type(fs))
+# fs.add(50)
+# fs.remove(10)
+'''
