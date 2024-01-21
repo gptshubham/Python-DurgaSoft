@@ -373,33 +373,29 @@
 # # fs.add(50)
 # # fs.remove(10)
 
-# Dictionary
-d = {100:'shubham',200:'kumar',300:'gupta'}
-print(d,type(d))
-print(d[100])
-user = {'name':'shubham','age':22,'gender':'male'}
-print(user['name'])
-
-d = {}
-d['name'] = 'shubham'
-print(d)
-d['age'] = 22
-print(d)
-d['gender'] = 'male'
-print(d)
-d ['name'] = 'abhi'
-d['age'] = 26
-print(d)
-
-d = {}
-d[100] = 'shubham'
-d['abhi'] = 200
-d['flag'] = True
-print(d)
-
-
-
-
+# # Dictionary
+# d = {100:'shubham',200:'kumar',300:'gupta'}
+# print(d,type(d))
+# print(d[100])
+# user = {'name':'shubham','age':22,'gender':'male'}
+# print(user['name'])
+#
+# d = {}
+# d['name'] = 'shubham'
+# print(d)
+# d['age'] = 22
+# print(d)
+# d['gender'] = 'male'
+# print(d)
+# d ['name'] = 'abhi'
+# d['age'] = 26
+# print(d)
+#
+# d = {}
+# d[100] = 'shubham'
+# d['abhi'] = 200
+# d['flag'] = True
+# print(d)
 #
 # # duplicate : key vs value
 # a = 100
@@ -547,10 +543,10 @@ print(d)
 # comment
 # """
 
-# # Constant --> Not applicable in Python
-# # convention
-# MAX_VALUE = 10  # It is a constant , don't change it's value
-# print(MAX_VALUE)
-# MAX_VALUE = 20
-# print(MAX_VALUE)
-# # as said constant concept is not applicable in Python
+# Constant --> Not applicable in Python
+# convention
+MAX_VALUE = 10  # It is a constant , don't change it's value
+print(MAX_VALUE)
+MAX_VALUE = 20
+print(MAX_VALUE)
+# as said constant concept is not applicable in Python
