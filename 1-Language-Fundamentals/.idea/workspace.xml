@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1fa73a39-766b-4527-b335-a916d54591c6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +26,17 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/3_Operators.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Module.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/5_Input_Output_Statements.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProblemsViewState">
+    <hideBySeverity>
+      <option value="11" />
+      <option value="12" />
+      <option value="13" />
+      <option value="14" />
+      <option value="15" />
+      <option value="16" />
+    </hideBySeverity>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -34,20 +46,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.1_Python_Identifiers.executor": "Run",
-    "Python.2_Python_Data_Types.executor": "Run",
-    "Python.3_Operators.executor": "Run",
-    "Python.Math_Module.executor": "Run",
-    "Python.Module.executor": "Run",
-    "Python.demo.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.1_Python_Identifiers.executor&quot;: &quot;Run&quot;,
+    &quot;Python.2_Python_Data_Types.executor&quot;: &quot;Run&quot;,
+    &quot;Python.3_Operators.executor&quot;: &quot;Run&quot;,
+    &quot;Python.5_Input_Output_Statements.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Math_Module.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Module.executor&quot;: &quot;Run&quot;,
+    &quot;Python.demo.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
