@@ -149,7 +149,7 @@
 # s = input('Enter any string : ')
 # i = 0
 # for char in s:
-#     print('character at %d index =' % i,char)                # we can use %i as well instead of %d
+#     print('character at %d index =' % i,char)              # we can use %i as well instead of %d
 #     i+=1
 
 # # print Dhoni 10 times using for loop
@@ -171,6 +171,81 @@
 # for i in range(1,20,2):
 #     print(i)
 
-# print numbers from 10 to 1 (descending order)
-for i in range(10,0,-1):
-    print(i)
+# # print numbers from 10 to 1 (descending order)
+# for i in range(10,0,-1):
+#     print(i)
+
+# # print sum of numbers present in a given list
+# L = []
+# for i in range(0,4):
+#     L.append(int(input('Enter a number : ')))
+# # print(L)
+# sum = 0
+# for i in L:
+#     sum += i
+# print('Sum =',sum)
+# # Alternatively using eval()
+# L = eval(input('Enter a List : '))
+# print(L)
+# sum = 0
+# for i in L:
+#     sum += i
+# print('Sum =',sum)
+
+# while loop
+
+# # print numbers from 1 to 10 using while loop
+# i = 1
+# while i<=10:
+#     print(i)
+#     i += 1
+
+# # print the sum of first n natural numbers
+# n = int(input('Enter the value of n : '))
+# i = 1
+# sum = 0
+# while i <= n:
+#     sum += i
+#     i += 1
+# # print('The sum of first {} natural numbers is {}'.format(n,sum))
+# print('The sum of first %i natural numbers is %i .' %(n,sum))
+
+# # infinite loops
+
+# # write a program to prompt user to enter your favourite player
+# # untill entering Dhoni
+# player = ''
+# while player != 'Dhoni':
+#     player = input('Enter your favourite player name : ')
+# print('Thank you for confirmation!')
+# print('Your favourite player is %s' %player)
+
+# # userName Password Program
+# username = 'sanki aadmi'
+# password = 'kalachittha'
+# user = ''
+# pwd = ''
+# while user != username or pwd != password:
+#     user = input('Enter the username : ')
+#     pwd = input ('Enter the password : ')
+# print('Welcome!')
+# # Alternatively :
+# username = 'sanki aadmi'
+# password = 'kalachittha'
+# user = ''
+# pwd = ''
+# while True:
+#     user = input('Enter the username : ')
+#     pwd = input ('Enter the password : ')
+#     if user == username and pwd == password:
+#         print('welcome %s !' %user)
+#         break
+#     else:
+#         print('Invalid Username or Password! \n Please Try Again!')
+
+# # nested loops
+
+# for i in range(4):
+#     for j in range(4):
+#         print(i,j)
+
