@@ -249,3 +249,182 @@
 #     for j in range(4):
 #         print(i,j)
 
+
+# Transfer Statements
+
+# 1. break
+# # Basic Example
+# for i in range(10):
+#     if i==5:
+#         print('Enough of that Stupid Loop!')
+#         break
+#     print(i)
+
+# Qsn: Which Loop will break in case of following Programs:
+# for i in range(10):
+#     for j in range(10):
+#         if j == 5:
+#             print('Loop Completed!')
+#             break
+#         print(i,j)
+
+# for i in range(10):
+#     for j in range(10):
+#         if i == 5:
+#             print('Loop Skipped!')
+#             break
+#         print(i,j)
+
+# for i in range(10):
+#     if i == 5:
+#         print('Loop Completed!')
+#         break
+#     for j in range(10):
+#         print(i,j)
+
+# for i in range(10):
+#     for j in range(10):
+#         print(i,j)
+#     if j == 5:
+#         print('Loop Completed!')
+#         break
+
+# Cart Insurance Example with break statement
+# cart = [10,20,600,60,70]
+# for item in cart:
+#     if item >= 500:
+#         print('To place this order, insurance must be required!')
+#         break
+#     print(item)
+
+# Mobile No. & Directory Example --> Search Operation (is it available or not)
+
+# 2. continue --> skip current iteration and continue for the remaining
+
+# # basic example
+# for i in range(10):
+#     if i == 5:
+#         print('Loop Skipped!')
+#         continue
+#     print('order',end='')
+#     print(' = ',end='')
+#     print(i)
+
+# # print only odd numbers between 1 and 20
+# for i in range(1,20):
+#     if i%2 == 0:
+#         continue
+#     print(i)
+
+# # print table of n: (Although this code is expensive, still it's possible to do so.)
+# n = int(input('Enter the number : '))
+# for i in range(1,(n*10)+1):
+#     if i%n != 0:
+#         continue
+#     print(i)
+
+# # Cart Insurance Example with continue statement
+# cart = [10,20,600,60,70]
+# for item in cart:
+#     if item >= 500:
+#         print('We cannot process this itme without insurance : ',item)
+#         continue
+#     print(item)
+
+# number = [10,20,0,5,0,30]
+# for i in number:
+#     if i == 0:
+#         print('dividing with 0 leads to ZeroDivisionError!')
+#         continue
+#     # print('100/%d = %d' %(i,100/i))
+#     print('100/{} = {}'.format(i,100/i))
+
+# # else block
+# # for-else
+# # 1. for-else without break being executed.
+# print('1. for-else without break being executed.')
+# cart = [10,20,30,40,50]
+# for item in cart:
+#     if item >= 500:
+#         print("We can't place this order")
+#         break
+#     print('Processing Item',item)
+# else:
+#     print('Congrates...! All your items processed successfully!')
+# # 2. for-else with break being executed.
+# print('2. for-else with break being executed.')
+# cart = [10,20,30,700,40,50]
+# for item in cart:
+#     if item >= 500:
+#         print("We can't place this order")
+#         break
+#     print('Processing Item',item)
+# else:
+#     print('Congrates...! All your items processed successfully!')
+# # 3. for-loop withou break statement--> not much meaningful
+# print('3. for-loop withou break statement')
+# cart = [10,20,30,700,40,50]
+# for item in cart:
+#     if item >= 500:
+#         print("We can't place this order")
+#         continue
+#     print('Processing Item',item)
+# else:
+#     print('Congrates...! All your items processed successfully!')
+
+# pass Statement
+
+# # basic example
+# if 10>20:
+#     print('Hello')
+# else:
+#     pass
+
+# addItem(), removeItem() & updateItem() Example
+def addItem():
+    pass
+def deleteItem():
+    pass
+def updateItem():
+    pass
+
+# class Loan example
+class Loan:
+    def getInterestRate(self):
+        pass
+class GoldLoan(Loan):
+    def getInterestRate(self):
+        return 10
+class HomeLoan(Loan):
+    def getInterestRate(self):
+        return 7
+class CarLoan(Loan):
+    def getInterestRate(self):
+        return 13
+
+# # del statement
+
+# # basic Example
+# x = 10
+# print(x)
+# del x
+# print(x)
+
+# s1 = 'shubham'
+# s2 = s1
+# s3 = s1
+# print(s1,s2,s3)
+# del s1
+# print('s2 =',s2)
+# print('s3 =',s3)
+# # print('s1 =',s1)
+# del s2,s3
+# # print(s2)
+# # print(s3)
+# s1 = None
+# print(s1)
+
+# # deleting an item of string object
+# s = 'shubham'
+# print(s[0])
+# del s[0]
