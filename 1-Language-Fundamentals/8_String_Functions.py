@@ -213,15 +213,243 @@
 # no_of_spaces = len(spacedInput) - len(user)
 # print(no_of_spaces)
 
-# split()
-userInput = input('Enter a String : ')
-userList = userInput.split()
-print(userList)
+# # split()
+# userInput = input('Enter a String : ')
+# userList = userInput.split()
+# print(userList)
+#
+# userInput = input('Enter a String : ')
+# userList = userInput.split('-')
+# print(userList)
+#
+# userInput = input('Enter a String : ')
+# userList = userInput.split(',')
+# print(userList)
 
-userInput = input('Enter a String : ')
-userList = userInput.split('-')
-print(userList)
+# # join()
+# userList = ['Shubham','Kumar','Gupta']
+# user = ' '.join(userList)
+# print(user)
+# user = '-'.join(userList)
+# print(user)
+# userList = ['Shubham','Kumar','Gupta']
+# user = ','.join(userList)
+# print(user)
+# userList = ['Shubham','Kumar','Gupta']
+# user = ''.join(userList)
+# print(user)
+# userTuple = ('Shubham','Kumar','Gupta')
+# user = ' '.join(userTuple)
+# print(user)
 
-userInput = input('Enter a String : ')
-userList = userInput.split(',')
-print(userList)
+# # upper()
+# userName = 'shubham kumar gupta'
+# userName = userName.upper()
+# print(userName)
+
+# # lower()
+# userName = 'ShuBHaM kUmaR GUpta'
+# userName = userName.lower()
+# print(userName)
+
+# # capitalize()
+# userName = 'shubham kumar gupta'
+# userName = userName.capitalize()
+# print(userName)
+
+# # title()
+# userName = 'shubham kumar gupta'
+# userName = userName.title()
+# print(userName)
+# userName = 'shubham-kumar-gupta'
+# userName = userName.title()
+# print(userName)
+
+# # swapcase()
+# userName = 'Shubham Kumar Gupta'
+# userName = userName.swapcase()
+# print(userName)
+
+# # isalpha()
+# user = 'Shubham Kumar Gupta'
+# print(user.isalpha())
+# user = 'ShubhamKumarGupta'
+# print(user.isalpha())
+
+# # isdigit()
+# marks = '98'
+# print(marks.isdigit())
+# marks = ' 98'
+# print(marks.isdigit())
+
+# # isnumeric()()
+# marks = '98'
+# print(marks.isnumeric())
+# marks = ' 98'
+# print(marks.isnumeric())
+
+# # isalnum()
+# userName = 'Shubham Kumar Gupta 123'
+# print(userName.isalnum())
+# userName = 'ShubhamKumarGupta123'
+# print(userName.isalnum())
+# userName = 'Shubham'
+# print(userName.isalnum())
+# userName = '123'
+# print(userName.isalnum())
+
+# # islower()
+# userName = 'shubham kumar gupta'
+# print(userName.islower())
+# userName = 'shubham123'
+# print(userName.islower())
+
+# # isupper()
+# userName = 'SHUBHAM'
+# print(userName.isupper())
+# userName = 'SHUBHAM12345'
+# print(userName.isupper())
+
+# # istitle()
+# user = 'Shubham Kumar Gupta'
+# print(user.istitle())
+
+# # isspace()
+# marks = ' 98'
+# print(marks.isspace())
+# marks = '    '
+# print(marks.isspace())
+
+# # write a program to print the type of character
+# # provided by user as input
+# s = input('Enter Any Character : ')
+# if s.isalnum():
+#     if s.isalpha():
+#         if s.islower():
+#             print('Lowercase Alphabet')
+#         else:
+#             print('Uppercase Alphabet')
+#     else:
+#         print('Digit')
+# elif s.isspace():
+#     print('Space')
+# else:
+#     print('Non Space Special Character')
+# # this code has bugs
+# if >1 length string is passed by the user
+
+# # startswith()
+# user = 'Shubham Kumar Gupta 123'
+# print(user.startswith('S'))
+# print(user.startswith('s'))
+# print(user.startswith('Shubh'))
+
+# # endswith()
+# user = 'Shubham Kumar Gupta 123'
+# print(user.endswith('3'))
+# print(user.endswith('123'))
+# print(user.endswith('Gupta 123'))
+# print(user.endswith('Gupta'))
+
+# # Program 1 : write a program to reverse a given string
+
+# # 1. using slice operator
+# s = input('1. Enter a String : ')
+# print(s[::-1])
+
+# # 2. using reversed()
+# s = input('2. Enter a String : ')
+# result = reversed(s)
+# print(result)
+# print(type(result))
+# print(''.join(result))
+# print(type(''.join(result)))
+
+# # 3. using for loop --> string concatenation
+# s = input('3. Enter a String : ')
+# result = ''
+# for i in range(len(s)-1,-1,-1):
+#     result += s[i]
+# print(result)
+
+# # 4. using for loop with append()
+# s = input('4. Enter a String : ')
+# sList = []
+# for i in range(len(s)-1,-1,-1):
+#     sList.append(s[i])
+# result = ''.join(sList)
+# print(result)
+
+# # 5. using for loop without append() without string concatenation
+# s = input('5. Enter a String : ')
+# sList = []
+# for i in range(len(s)-1,-1,-1):
+#     sList += [s[i]]
+#     # Computational Thinking Rocks !
+# result = ''.join(sList)
+# print(result)
+
+# # 6. using while loop --> string concatenation
+# s = input('6. Enter a String : ')
+# result = ''
+# count = len(s) - 1
+# while count>=0:
+#     result += s[count]
+#     count -= 1
+# print(result)
+
+# # 7. using while loop with append()
+# s = input('7. Enter a String : ')
+# sList = []
+# count = len(s) - 1
+# while count>=0:
+#     sList.append(s[count])
+#     count -= 1
+# print(''.join(sList))
+
+# # 8. using while loop without append() & without String Concatenation
+# s = input('8. Enter a String : ')
+# sList = []
+# count = len(s) - 1
+# while count>=0:
+#     sList += [s[count]]
+#     count -= 1
+# print(''.join(sList))
+
+# # Program 2 : write a program to Reverse Order of Words in a string
+
+# # 1. while loop, split() and string concatenation
+# s = "shubham kumar gupta"
+# # print('Length of String is =',len(s))
+# sList = s.split()
+# # print(sList)
+# output = ''
+# i = len(sList)-1
+# while i>=0:
+#     output += sList[i]
+#     if i!=0:
+#         output += ' '
+#     i -= 1
+# print(output)
+# # print('Length of Reversed String =',len(output))
+
+# # 2. while loop , split() , append() , join()
+# s = "Learning Python is very easy"
+# print(s)
+# sList = s.split()
+# # print('Length of String is =',len(s))
+# # print(sList)
+# output = []
+# i = len(sList)-1
+# while i>=0:
+#     output.append(sList[i])
+#     i -= 1
+#
+# output = ' '.join(output)
+# print(output)
+# # print('Length of Reversed String =',len(output))
+
+# # like previous program we can use different ways
+# # to code this program as well
+# # However, solving this problem using for loop is not recommended
+
