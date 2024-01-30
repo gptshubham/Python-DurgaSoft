@@ -130,38 +130,35 @@
 # else:
 #     print('Please Enter a Valid Input!')
 
-# Mini Project: Number to Word Converter Module
-
-from Converter import conversion
-
-print(conversion(10))
-print(conversion(100))
-print(conversion(101))
-print(conversion(19))
-print(conversion(119))
-print(conversion(200))
-print(conversion(180))
-print(conversion(999))
-print(conversion(750))
-print(conversion(605))
-print(conversion(444))
-print(conversion(000))
-print(conversion(167))
-s = conversion(666)
-print(s)
-s = conversion(947)
-print(s)
-s = conversion(512)
-print(s)
-s = conversion(381)
-print(s)
-s = conversion(420)
-print(s)
-s = conversion(240)
-print(s)
-
-
-
+# # Mini Project: Number to Word Converter Module
+#
+# from Converter import conversion as convert
+#
+# print(convert(10))
+# print(convert(100))
+# print(convert(101))
+# print(convert(19))
+# print(convert(119))
+# print(convert(200))
+# print(convert(180))
+# print(convert(999))
+# print(convert(750))
+# print(convert(605))
+# print(convert(444))
+# print(convert(000))
+# print(convert(167))
+# s = convert(666)
+# print(s)
+# s = convert(947)
+# print(s)
+# s = convert(512)
+# print(s)
+# s = convert(381)
+# print(s)
+# s = convert(420)
+# print(s)
+# s = convert(240)
+# print(s)
 
 # Iterative Statements
 

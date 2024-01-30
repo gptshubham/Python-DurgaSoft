@@ -5,32 +5,35 @@ d1 = {0:'Zero',1:'One',2:'Two',3:'Three',4:'Four',5:'Five',6:'Six',7:'Seven',8:'
 d10 = {2:'Twenty',3:'Thirty',4:'Forty',5:'Fifty',6:'Sixty',7:'Seventy',8:'Eighty',9:'Ninety'}
 # function to convert numbers into words
 def conversion(n):
-    word = ''
-    if n in d1:
-        word = d1[n]
-    elif 20 < n < 100:
-        unit = n%10
-        tenth = n-unit
-        word = d1[tenth]+' '+d1[unit]
-    elif 99 < n <= 999:
-        unit = n%10
-        n //= 10
-        tenth = n % 10
-        n //= 10
-        if unit == 0:
-            if tenth == 0:
-                word = d1[n] + ' Hundred'
+    if type(n) == int:
+        word = ''
+        if n in d1:
+            word = d1[n]
+        elif 20 < n < 100:
+            unit = n%10
+            tenth = n-unit
+            word = d1[tenth]+' '+d1[unit]
+        elif 99 < n <= 999:
+            unit = n%10
+            n //= 10
+            tenth = n % 10
+            n //= 10
+            if unit == 0:
+                if tenth == 0:
+                    word = d1[n] + ' Hundred'
+                elif tenth == 1:
+                    word = d1[n] + ' Hundred and ' + d1[(tenth * 10) + unit]
+                else:
+                    word = d1[n] + ' Hundred and ' + d10[tenth]
+            elif tenth == 0:
+                word = d1[n] + ' Hundred and ' + d1[unit]
             elif tenth == 1:
                 word = d1[n] + ' Hundred and ' + d1[(tenth * 10) + unit]
             else:
-                word = d1[n] + ' Hundred and ' + d10[tenth]
-        elif tenth == 0:
-            word = d1[n] + ' Hundred and ' + d1[unit]
-        elif tenth == 1:
-            word = d1[n] + ' Hundred and ' + d1[(tenth * 10) + unit]
-        else:
-            word = d1[n] + ' Hundred and ' + d10[tenth] + ' ' + d1[unit]
-    return word
+                word = d1[n] + ' Hundred and ' + d10[tenth] + ' ' + d1[unit]
+        return word
+    else:
+        return 'Invalid Input!'
 
 # # testing conversion()
 # # taking input from user
