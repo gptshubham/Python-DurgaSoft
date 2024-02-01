@@ -453,3 +453,222 @@
 # # to code this program as well
 # # However, solving this problem using for loop is not recommended
 
+# # Program 3 : write a program to reverse the internal content of each word
+# # Input : one two three
+# # Output : eno owt eerht
+
+# # 1. using split(), slice operator and string concatenation
+# s = input('1.Enter a string : ')
+# sList = s.split()
+# result = ''
+# for i in range(len(sList)):
+#     result += sList[i][::-1]
+#     if i != len(sList) -1:
+#         result += ' '
+# print(result)
+
+# # 2. using split(), slice, append() and join()
+# s = input('2.Enter a string : ')
+# sList = s.split()
+# resultList = []
+# for item in sList:
+#     resultList.append(item[::-1])
+# resultString = ' '.join(resultList)
+# print(resultString)
+
+# # 3. using split(), slice, and join() without append()
+# s = input('3.Enter a string : ')
+# sList = s.split()
+# resultList = []
+# for item in sList:
+#     resultList += [item[::-1]]
+# resultString = ' '.join(resultList)
+# print(resultString)
+
+# # Program 4 : Reverse Internal Content of every second word
+# # Input : one two three four
+# # Output : one owt three ruof
+
+# # using split(), slice and string concatenation
+# s = input('Enter a String : ')
+# sList = s.split()
+# result = ''
+# for i in range(len(sList)):
+#     if i%2 == 1:
+#         result += sList[i][::-1]
+#     else:
+#         result += sList[i]
+#     if i != len(sList) - 1:
+#         result += ' '
+# print(result)
+
+# # Program 5 : print characters at odd positions and even positions for any given string
+# # HINT: (possition => index)
+
+# # 1. using while loop & String Concatenation
+# s = input('Enter a String : ')
+# odds = ''
+# evens = ''
+# i = 0
+# while i<len(s):
+#     if i%2 == 0:
+#         evens += s[i]
+#     else:
+#         odds += s[i]
+#     i += 1
+# print('Characters at even positions :',evens)
+# print('Characters at odd positions :',odds)
+# # Note:
+# # we can use append and join() instead of string concatenation,
+# # in which case we will initialize an empty list instead of an empty string.
+
+# # 2. using while loop & end
+# s = input('Enter a String : ')
+# print('Characters at even positions :')
+# i = 0
+# while i<len(s):
+#     if i%2 == 0:
+#         print(s[i],end='')
+#     i += 1
+# print()
+# print('Characters at odd positions :')
+# i = 1
+# while i<len(s):
+#     if i%2 == 1:
+#         print(s[i],end='')
+#     i += 1
+
+# # Note:
+# # This problem can be Programmed using for loop also However, since we are iterating based on Index,
+# # while loop is recommended.
+
+# # Program 6 :Merge characters of 2 strings into a single string by taking characters alternatively
+
+# # 1. using while loop
+# # Constraint(bug): if both strings are not of same length this code doesn't run
+# s1 = input('Enter First String : ')       #kumar
+# s2 = input('Enter Second String : ')      #gupta
+# output = ''
+# i=j=0
+# while i<len(s1) or j<len(s2):
+#     output += s1[i] + s2[j]
+#     i += 1
+#     j += 1
+# print(output)
+
+# # 2. Let's remove that damn bug from above code
+# s1 = input('Enter First String : ')        #salman
+# s2 = input('Enter Second String : ')       #khan
+# output = ''
+# i=j=0
+# while i<len(s1) or j<len(s2):
+#     if i<len(s1):
+#         output += s1[i]
+#         i += 1
+#     if j<len(s2):
+#         output += s2[j]
+#         j += 1
+# print(output)
+
+# # # Program 7:
+# # Input: ABCDEF and 123456
+# # Output: AA1BB2CC3DD4EE5FF6
+# s1 = input('Enter Alphabets : ')
+# s2 = str(input('Enter a Number : '))
+# result = ''
+# i=j=0
+# while i<len(s1) or j<len(s2):
+#     if i<len(s1):
+#         result += s1[i]*2
+#         i += 1
+#     if j<len(s2):
+#         result += s2[j]
+#         j += 1
+# print(result)
+
+# # Program 8: write a program to sort alphanumeric characters present in the given string.
+# # First Alphabets and then Numeric Values : B4A1D3 --> ABD134
+# # 1. using for loop
+# s = input('Enter any Alphanumeric String : ')
+# sAlpha=sDigit=''
+# for i in s:
+#     if i.isalpha():
+#         sAlpha += i
+#     else:
+#         sDigit += i
+# # print(sAlpha,sDigit)
+# sList = sorted(sAlpha) + sorted(sDigit)
+# # print(sList)
+# sortedS = ''.join(sList)
+# print(sortedS)
+
+# # 2. using while loop
+# s = input('Enter any Alphanumeric String : ')
+# sAlpha=sDigit=''
+# i = 0
+# while i<len(s):
+#     if s[i].isalpha():
+#         sAlpha += s[i]
+#     else:
+#         sDigit += s[i]
+#     i += 1
+# # print(sAlpha,sDigit)
+# sList = sorted(sAlpha) + sorted(sDigit)
+# # print(sList)
+# sortedS = ''.join(sList)
+# print(sortedS)
+
+# # Program 9:
+# # Input: a4b3c2 --> every alphabet symbol followed by a single digit
+# # Output: aaaabbbcc
+# s = input('Enter a String : ')
+# output = ''
+# for i in s:
+#     if i.isalpha():
+#         sAlpha = i
+#     else:
+#         output += sAlpha * int(i)
+# print(output)
+
+# Program 10:
+# Input: a14b13c12 --> every alphabet symbol followed by a number
+# Output: a*14 times + b*13 times + c*12 times
+
+# # using while loop
+# s = input('Enter a String : ')
+# num = ''
+# output = ''
+# i = 0
+# while i<len(s):
+#     if s[i].isalpha():
+#         char = s[i]
+#     else:
+#         num += s[i]
+#         j = i+1
+#         if j<len(s) and s[j].isalpha():
+#             output += (char * int(num))
+#             num = ''
+#             print(char, output.count(char))
+#         if (i+1)==len(s):
+#             output += (char * int(num))
+#             print(char, output.count(char))
+#     i += 1
+# print(output)
+
+# # using for loop
+# s = input('Enter a String : ')
+# sNum = ''
+# output = ''
+# for i in range(len(s)):
+#     if s[i].isalpha():
+#         ch = s[i]
+#     else:
+#         sNum += s[i]
+#         if (i+1)<len(s) and s[i+1].isalpha():
+#             output += ch * int(sNum)
+#             sNum = ''
+#             print(ch, output.count(ch))
+#         if (i+1)==len(s):
+#             output += (ch * int(sNum))
+#             print(ch, output.count(ch))
+# print(output)
