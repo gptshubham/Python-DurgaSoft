@@ -352,11 +352,11 @@
 # print(user.endswith('Gupta'))
 
 # # Program 1 : write a program to reverse a given string
-
+#
 # # 1. using slice operator
 # s = input('1. Enter a String : ')
 # print(s[::-1])
-
+#
 # # 2. using reversed()
 # s = input('2. Enter a String : ')
 # result = reversed(s)
@@ -364,14 +364,14 @@
 # print(type(result))
 # print(''.join(result))
 # print(type(''.join(result)))
-
+#
 # # 3. using for loop --> string concatenation
 # s = input('3. Enter a String : ')
 # result = ''
 # for i in range(len(s)-1,-1,-1):
 #     result += s[i]
 # print(result)
-
+#
 # # 4. using for loop with append()
 # s = input('4. Enter a String : ')
 # sList = []
@@ -379,7 +379,7 @@
 #     sList.append(s[i])
 # result = ''.join(sList)
 # print(result)
-
+#
 # # 5. using for loop without append() without string concatenation
 # s = input('5. Enter a String : ')
 # sList = []
@@ -388,7 +388,7 @@
 #     # Computational Thinking Rocks !
 # result = ''.join(sList)
 # print(result)
-
+#
 # # 6. using while loop --> string concatenation
 # s = input('6. Enter a String : ')
 # result = ''
@@ -397,7 +397,7 @@
 #     result += s[count]
 #     count -= 1
 # print(result)
-
+#
 # # 7. using while loop with append()
 # s = input('7. Enter a String : ')
 # sList = []
@@ -406,7 +406,7 @@
 #     sList.append(s[count])
 #     count -= 1
 # print(''.join(sList))
-
+#
 # # 8. using while loop without append() & without String Concatenation
 # s = input('8. Enter a String : ')
 # sList = []
@@ -417,7 +417,7 @@
 # print(''.join(sList))
 
 # # Program 2 : write a program to Reverse Order of Words in a string
-
+#
 # # 1. while loop, split() and string concatenation
 # s = "shubham kumar gupta"
 # # print('Length of String is =',len(s))
@@ -432,7 +432,7 @@
 #     i -= 1
 # print(output)
 # # print('Length of Reversed String =',len(output))
-
+#
 # # 2. while loop , split() , append() , join()
 # s = "Learning Python is very easy"
 # print(s)
@@ -448,7 +448,7 @@
 # output = ' '.join(output)
 # print(output)
 # # print('Length of Reversed String =',len(output))
-
+#
 # # like previous program we can use different ways
 # # to code this program as well
 # # However, solving this problem using for loop is not recommended
@@ -456,7 +456,7 @@
 # # Program 3 : write a program to reverse the internal content of each word
 # # Input : one two three
 # # Output : eno owt eerht
-
+#
 # # 1. using split(), slice operator and string concatenation
 # s = input('1.Enter a string : ')
 # sList = s.split()
@@ -466,7 +466,7 @@
 #     if i != len(sList) -1:
 #         result += ' '
 # print(result)
-
+#
 # # 2. using split(), slice, append() and join()
 # s = input('2.Enter a string : ')
 # sList = s.split()
@@ -475,7 +475,7 @@
 #     resultList.append(item[::-1])
 # resultString = ' '.join(resultList)
 # print(resultString)
-
+#
 # # 3. using split(), slice, and join() without append()
 # s = input('3.Enter a string : ')
 # sList = s.split()
@@ -488,7 +488,7 @@
 # # Program 4 : Reverse Internal Content of every second word
 # # Input : one two three four
 # # Output : one owt three ruof
-
+#
 # # using split(), slice and string concatenation
 # s = input('Enter a String : ')
 # sList = s.split()
@@ -504,7 +504,7 @@
 
 # # Program 5 : print characters at odd positions and even positions for any given string
 # # HINT: (possition => index)
-
+#
 # # 1. using while loop & String Concatenation
 # s = input('Enter a String : ')
 # odds = ''
@@ -521,7 +521,7 @@
 # # Note:
 # # we can use append and join() instead of string concatenation,
 # # in which case we will initialize an empty list instead of an empty string.
-
+#
 # # 2. using while loop & end
 # s = input('Enter a String : ')
 # print('Characters at even positions :')
@@ -537,13 +537,13 @@
 #     if i%2 == 1:
 #         print(s[i],end='')
 #     i += 1
-
+#
 # # Note:
 # # This problem can be Programmed using for loop also However, since we are iterating based on Index,
 # # while loop is recommended.
 
 # # Program 6 :Merge characters of 2 strings into a single string by taking characters alternatively
-
+#
 # # 1. using while loop
 # # Constraint(bug): if both strings are not of same length this code doesn't run
 # s1 = input('Enter First String : ')       #kumar
@@ -555,7 +555,7 @@
 #     i += 1
 #     j += 1
 # print(output)
-
+#
 # # 2. Let's remove that damn bug from above code
 # s1 = input('Enter First String : ')        #salman
 # s2 = input('Enter Second String : ')       #khan
@@ -601,7 +601,7 @@
 # # print(sList)
 # sortedS = ''.join(sList)
 # print(sortedS)
-
+#
 # # 2. using while loop
 # s = input('Enter any Alphanumeric String : ')
 # sAlpha=sDigit=''
@@ -633,7 +633,7 @@
 # Program 10:
 # Input: a14b13c12 --> every alphabet symbol followed by a number
 # Output: a*14 times + b*13 times + c*12 times
-
+#
 # # using while loop
 # s = input('Enter a String : ')
 # num = ''
@@ -654,7 +654,7 @@
 #             print(char, output.count(char))
 #     i += 1
 # print(output)
-
+#
 # # using for loop
 # s = input('Enter a String : ')
 # sNum = ''
@@ -672,3 +672,84 @@
 #             output += (ch * int(sNum))
 #             print(ch, output.count(ch))
 # print(output)
+
+# # Program 11: Input: a4k3b2 --> Output: aeknbd
+#
+# # using for loop
+# s = input('Enter String : ')
+# output = ''
+# for i in s:
+#     if i.isalpha():
+#         ch = i
+#         output += i
+#     else:
+#         output += chr(ord(ch)+int(i))
+# print(output)
+#
+# # using while loop
+# s = input('Enter String : ')
+# output = ''
+# i = 0
+# while i<len(s):
+#     if s[i].isalpha():
+#         ch = s[i]
+#         output += s[i]
+#     else:
+#         output += chr(ord(ch)+int(s[i]))
+#     i+=1
+# print(output)
+
+# # Program 12: Remove duplicate characters from given string
+# # and sort the string
+# # Input: AAABAB CACBC CCAACBD DADBCDAD --> Output: ABCD
+#
+# # 1. using string concatenation
+# s = input('1.Enter String : ')
+# output = ''
+# for i in s:
+#     if i not in output:
+#         output += i
+# output = ''.join(sorted(output.replace(' ','')))
+# print(output)
+#
+# # 2. using append()
+# s = input('2.Enter String : ')
+# output = []
+# for i in s:
+#     if i not in output:
+#         output.append(i)
+# output = ''.join(sorted(output))
+# print(output.replace(' ',''))
+#
+# # 3. without using append
+# s = input('3.Enter String : ')
+# output = []
+# for i in s:
+#     if i not in output:
+#         output += [i]
+# output = ''.join(sorted(output))
+# print(output.replace(' ',''))
+
+# Program 13: Find No. of Occurrences of Each Character
+# present in a given string in sorted order
+s = sorted(input('Enter a String : ').upper())
+d = {}
+for i in s:
+    if i != ' ':
+        if i not in d:
+            d[i] = 1
+        else:
+            d[i] += 1
+
+for i in d:
+    print(i,':',d[i])
+
+# Program 14: Find if the given word is a Palindrome or not
+# Hint: reviver
+s = input('Enter a String : ').lower()
+s1 = s[::-1]
+if s == s1:
+    print('{} is a Palindrome.'.format(s))
+else:
+    print('{} is not a Palindrome.'.format(s))
+# easy peasy
