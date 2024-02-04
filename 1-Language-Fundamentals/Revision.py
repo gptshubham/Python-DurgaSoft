@@ -26,3 +26,74 @@
 # sAlpha = ''.join(sorted(sAlpha))
 # sdigit = ''.join(sorted(sdigit))
 # print(sAlpha + sdigit)
+
+# # # Input: B2A1D3 --> every alphabet symbol followed by a single digit
+# # # Output: BBADDD
+# s = input('Enter the String : ')
+# output = ''
+# for i in s:
+#     if i.isalpha():
+#         ch = i
+#     else:
+#         output += ch * int(i)
+# print(output)
+
+# # Input: B12A11D13 --> every alphabet symbol followed by a number
+# # Output: B*12 times + A*11 times + D*13 times
+# s = input('Enter the String : ')
+# output = ''
+# digit = ''
+# for i in range(len(s)):
+#     if s[i].isalpha():
+#         ch = s[i]
+#     else:
+#         digit += s[i]
+#         if i < len(s) -1:
+#             if s[i+1].isalpha():
+#                 output += ch * int(digit)
+#                 print(ch,output.count(ch),'times')
+#                 digit = ''
+#         if i == len(s) -1:
+#             output += ch * int(digit)
+#             print(ch,output.count(ch),'times')
+# print(output)
+# Note: while loop is preferred by the mentor as focus is very much on the index positions
+# Also, for i in s does not seem appropriate in the given case => while loop ✔
+
+# # Input: B2A1D3 --> Output: BDABDG
+# s = input('Enter the String : ')
+# output = ''
+# for i in s:
+#     if i.isalpha():
+#         ch = i
+#         output += i
+#     else:
+#         output += chr(ord(ch) + int(i))
+# print(output)
+
+# # Program 12: Remove duplicate characters from given string
+# s = input('Enter the String : ')
+# output = ''
+# for i in s:
+#         if i not in output:
+#             output += i
+# print(output.replace(' ',''))
+
+# # write a program to print various indices where
+# # a given substring is present in a given string
+# # Input:string --> ABCDCDC,subString --> CDC , Output:2
+# string = 'ABCDCDC'
+# subString = 'CDC'
+# start = 0
+# end = len(string)
+# count = 0
+# i = 0
+# while True:
+#     position = string.find(subString,start,end)
+#     if position != -1:
+#         count += 1
+#         start = position + len(subString) -1
+#     else:
+#         break
+#     i+=1
+# print(count)
