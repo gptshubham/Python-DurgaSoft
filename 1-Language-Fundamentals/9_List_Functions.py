@@ -1,6 +1,7 @@
 # # creating list with Dynamic Input
 # L = input('Enter a List : ')            # [10,20,30,40]
 # print(type(L))                          # str
+from copy import copy
 
 # L = list(input('Enter a List : '))      # [10,20,30,40]
 # print(L)     # ['[', '1', '0', ',', '2', '0', ',', '3', '0', ',', '4', '0', ']']
@@ -139,3 +140,150 @@
 # print(L3)                                  # ***** Surprise
 # L2.extend(L1)
 # print(L2)
+# # Note: extend() changes the original list and returns None as output, hence
+# # we cannot store ['chicken', 'mutton', 'fish', 'KF', 'RC', 'FO'] in a new variable
+# # However, if we don't  want to change the original list and store the result
+# # in a new variable L2 then we can just use + operator
+# L1 = ['chicken','mutton','fish']
+# L2 = ['KF','RC','FO']
+# L3 = L1 + L2
+# print(L3)
+
+# # remove()
+# L1 = ['chicken','mutton','fish']
+# L2 = L1.remove('fish')
+# print(L1)
+# print(L2)
+# # Note: remove() changes the original list and returns None as output hence
+# # we cannot store ['chicken', 'mutton'] in a new variable
+# # However, if we don't  want to change the original list and store the result
+# # in a new variable L2 then we can just use copy()
+# L1 = ['chicken','mutton','fish']
+# L2 = copy(L1)
+# L2.remove('fish')
+# print(L1)
+# print(L2)
+
+# # How to avoid ValueError if item is not present in list
+# L1 = ['chicken','mutton','fish']
+# remove_item = input('Enter the item to remove : ')
+# if remove_item in L1:
+#     L1.remove(remove_item)
+# else:
+#     print('%s is not available!' % remove_item)
+# print(L1)
+
+# # removing an element which is available multiple times
+# L1 = ['KF','KF','RC','KF','KF','FO','KF']
+# remove_item = input('Enter the item to remove : ')
+# while True:
+#     if remove_item in L1:
+#         L1.remove(remove_item)
+#     else:
+#         break
+# print(L1)
+
+# # pop()
+# L1 = [420,9211,'AK47','AK203','Donald Trump','Joe Biden']
+# pop_item = L1.pop()
+# print('item popped out :',pop_item)
+# print(L1)
+#
+# # IndexError
+# L1 = []
+# # pop_item = L1.pop()
+# # How to avoid IndexError
+# if L1:
+#     new_pop_item = L1.pop()
+#     print(new_pop_item)
+# print(L1)
+# # Alternatively: using len()
+# if len(L1) != 0:
+#     new_pop_item = L1.pop()
+#     print(new_pop_item)
+# print(L1)
+#
+# # Another case of IndexError --> index out of range
+# # and how to avoid such error
+# L1 = [420,9211,'AK47','AK203','Donald Trump','Joe Biden']
+# pop_item_index = int(input('Enter the index to pop : '))
+# if pop_item_index > len(L1)-1:
+#     print('Input out of Range!')
+# else:
+#     popped_item = L1.pop(pop_item_index)
+#     print('item popped :',popped_item)
+#     print(L1)
+#
+# # popping items in the forward direction
+# L1 = [9211,'AK47','AK203','Donald Trump','Joe Biden']
+# i = 0
+# n = len(L1)
+# while i<n:
+#     # print('Current Index Value :',i)
+#     # print('Current n value :',n)
+#     print('Popped Element :',L1.pop(i))
+#     if len(L1) == 0:
+#         break
+# print(L1)
+#
+# # alternatively: (I prefer this one --> concise code)
+# L1 = [9211,'AK47','AK203','Donald Trump','Joe Biden']
+# i = 0
+# while L1:
+#     print('Popped Element :', L1.pop(i))
+# print(L1)
+#
+# # # popping items in the backward direction
+# L1 = [9211,'AK47','AK203','Donald Trump','Joe Biden']
+# i = -1
+# while L1:
+#     print('Popped Element :', L1.pop(i))
+# print(L1)
+
+# # clear()
+# L1 = [9211,'AK47','AK203','Donald Trump','Joe Biden']
+# L1.clear()
+# print(L1)
+
+# # reverse()
+# L1 = [9211,'AK47','AK203','Donald Trump','Joe Biden']
+# print(L1)
+# L1.reverse()
+# print(L1)
+
+# # sort() --> ascending order / alphabetical order
+# L1 = [40,20,30,10,50,40]
+# print(L1)
+# L1.sort()
+# print(L1)
+
+# L1 = ['salman','khan','akshay','kumar']
+# print(L1)
+# L1.sort()
+# print(L1)
+
+# # TypeError
+# L1 = [40,20,30,'salman','khan']
+# L1.sort()
+# print(L1)
+
+# # sorting elements in reverse order --> descending order / reversed alphabetical order
+# L1 = [40,20,30,10,50,40]
+# L1.sort(reverse=True)
+# print(L1)
+
+# # Aliasing --> creating duplicate reference variable
+# L1 = [10,20,30,40]
+# L2 = L1
+# print(L1,id(L1))
+# print(L2,id(L2))
+# # Problem --> changing one affects the other
+# L1[0] = 7777
+# print(L1)
+# print(L2)
+
+# # cloning --> creating duplicate list object
+# L1 = [10,20,30,40]
+# L2 = L1.copy()
+# print(L1,id(L1))
+# print(L2,id(L2))
