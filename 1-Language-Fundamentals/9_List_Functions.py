@@ -272,6 +272,8 @@ from copy import copy
 # L1.sort(reverse=True)
 # print(L1)
 
+# # Aliasing vs. Cloning
+#
 # # Aliasing --> creating duplicate reference variable
 # L1 = [10,20,30,40]
 # L2 = L1
@@ -279,11 +281,138 @@ from copy import copy
 # print(L2,id(L2))
 # # Problem --> changing one affects the other
 # L1[0] = 7777
-# print(L1)
-# print(L2)
-
+# print('L1 :',L1)
+# print('L2 :',L2)
+# L2[1] = 8888
+# print('L1 :',L1)
+# print('L2 :',L2)
+#
 # # cloning --> creating duplicate list object
+# # 1. using [:]
 # L1 = [10,20,30,40]
-# L2 = L1.copy()
+# L2 = L1[:]
 # print(L1,id(L1))
 # print(L2,id(L2))
+# L1[1] = 7777
+# print(L1)
+# print(L2)
+# # 2. copy() --> preferred
+# L1 = [10,20,30,40,50]
+# L3 = L1.copy()
+# print(L1,id(L1))
+# print(L3,id(L3))
+# L1[1] = 7777
+# print(L1)
+# print(L3)
+
+# # Deep Copy & Shallow Copy --> Discussed in Next Level
+# # Note : L.copy() creates a Shallow Copy
+
+# # Mathematical Operators for List Object
+
+# # + operator ( Concatenation )
+# L1 = [10,20,30]
+# L2 = [70,80,90]
+# L3 = L1 + L2
+# print(L3)
+# L4 = L1 + [40]
+# print(L1)
+# print(L4)
+# # Note: Difference between + operator and extend()
+# s = 'Dhoni'
+# L1.extend(s)
+# ages = (22,23,24)
+# L2.extend(ages)
+# print(L2)
+# ages = {22,23,24}
+# L3.extend(ages)
+# print(L3)
+
+# # * operator ( Repetition )
+# L1 = [10,20,30]
+# L2 = L1 * 2
+# print(L2)
+
+# eqality operators
+
+# # == , !=
+# L1 = [10,20,30]
+# L2 = [10,20,30]
+# print(L1 == L2)
+# L1 = ['Dhoni','Kohli','Rohit']
+# L2 = ['Dhoni','Kohli','Rohit']
+# L3 = ['dhoni','kohli','rohit']
+# print(L1 == L2)
+# print(L1 == L3)
+# print(L1 != L3)
+
+# # Relational Operators ( Comparison )
+# # Note: not used frequently with List Objects,
+# # can be used to compare elements
+# x = [100,10,5]
+# y = [10,20,30,40,50,60]
+# print(x>y)
+# print(x>=y)
+# print(x<y)
+# print(x<=y)
+# x = [100,10,5]
+# y = [100,20,30,40,50,60]
+# print(x>y)
+# print(x>=y)
+# print(x<y)
+# print(x<=y)
+
+# # Membership Operators
+# L1 = ['Dhoni','Kohli','Rohit']
+# print('Dhoni' in L1)
+# print('dhoni' in L1)
+# print('Dhoni' not in L1)
+# print('dhoni' not in L1)
+# print('sikhar' in L1)
+# print('sikhar' not in L1)
+
+# # Identity Operaors --> memory address comparison is done
+# L1 = ['Dhoni','Kohli','Rohit']
+# L2 = L1
+# print(L1 is L2)
+# L3 = ['Dhoni','Kohli','Rohit']
+# print(L1 is L3)
+# print(L1 is not L3)
+
+# # Nested List
+# L = [10,20,[30,40]]
+# print(L)
+# print(L[0])
+# print(L[1])
+# print(L[2])
+# print(L[2][0])
+# print(L[2][1])
+
+# Nested List as Matrix
+L = [[10,20,30],[40,50,60],[70,80,90]]
+print('Elements by Row-wise :')
+for row in L:
+    print(row)
+print('Elements in Matrix Style :')
+for row in L:
+    for element in row:
+        print(element,end=' ')
+    print()
+# accessing elements of matrix using index
+print('Elements in Matrix Style using index :')
+L = [[10,20,30],[40,50,60],[70,80,90]]
+for i in range(len(L)):
+    for j in range(len(L[i])):
+        print(L[i][j],end=' ')
+    print()
+
+# List Comprehension
+# even numbers between 1 and 10 (inclusive)
+L = [element for element in range(1,11) if element%2 == 0]
+print(L)
+# square of every even number between 1 and 10 (inclusive)
+L = [element**2 for element in range(1,11) if element%2 == 0]
+print(L)
+# 2^n of natural numbers upto 10
+L = [2**element for element in range(1,11)]
+print(L)
