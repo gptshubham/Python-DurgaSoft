@@ -388,31 +388,64 @@ from copy import copy
 # print(L[2][0])
 # print(L[2][1])
 
-# Nested List as Matrix
-L = [[10,20,30],[40,50,60],[70,80,90]]
-print('Elements by Row-wise :')
-for row in L:
-    print(row)
-print('Elements in Matrix Style :')
-for row in L:
-    for element in row:
-        print(element,end=' ')
-    print()
-# accessing elements of matrix using index
-print('Elements in Matrix Style using index :')
-L = [[10,20,30],[40,50,60],[70,80,90]]
-for i in range(len(L)):
-    for j in range(len(L[i])):
-        print(L[i][j],end=' ')
-    print()
+# # Nested List as Matrix
+# L = [[10,20,30],[40,50,60],[70,80,90]]
+# print('Elements by Row-wise :')
+# for row in L:
+#     print(row)
+# print('Elements in Matrix Style :')
+# for row in L:
+#     for element in row:
+#         print(element,end=' ')
+#     print()
+# # accessing elements of matrix using index
+# print('Elements in Matrix Style using index :')
+# L = [[10,20,30],[40,50,60],[70,80,90]]
+# for i in range(len(L)):
+#     for j in range(len(L[i])):
+#         print(L[i][j],end=' ')
+#     print()
 
-# List Comprehension
-# even numbers between 1 and 10 (inclusive)
-L = [element for element in range(1,11) if element%2 == 0]
-print(L)
-# square of every even number between 1 and 10 (inclusive)
-L = [element**2 for element in range(1,11) if element%2 == 0]
-print(L)
-# 2^n of natural numbers upto 10
-L = [2**element for element in range(1,11)]
-print(L)
+# # List Comprehension
+
+# # even numbers between 1 and 10 (inclusive)
+# L = [x for x in range(1,11) if x%2 == 0]
+# print(L)
+
+# # square of even numbers between 1 and 10 (inclusive)
+# L = [x**2 for x in range(1,11) if x%2 == 0]
+# print(L)
+
+# # 2^n of natural numbers upto 10
+# L = [2**x for x in range(1,11)]
+# print(L)
+
+# # create a list from words list containing only
+# # the first letters of the words in the words list
+# words = ['dhoni','kohli','rohit','hardik']
+# L = [item[0] for item in words]
+# print(L)
+
+# num1 = [10,20,30,40]
+# num2 = [30,40,50,60]
+# # create a list with numbers which are present in num1
+# # but not in num2
+# num3 = [x for x in num1 if x not in num2]
+# print(num3)
+# # create a list with common numbers present in both lists
+# num4 = [x for x in num1 if x in num2]
+# print(num4)
+
+# # Nested List using List Comprehension
+# s = 'THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG'
+# words = s.split()
+# print(words)
+# L = [[word.title(),len(word)] for word in words]
+# print(L)
+
+# # write a program to display unique vowels present in the given word
+# vowels = ['a','e','i','o','u']
+# word = input('Enter any word : ').lower()
+# unique_vowels_in_word = [x for x in vowels if x in word]
+# print(unique_vowels_in_word)
+
