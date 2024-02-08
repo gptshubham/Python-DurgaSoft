@@ -7,7 +7,6 @@
     <list default="true" id="1fa73a39-766b-4527-b335-a916d54591c6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/8_String_Functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/8_String_Functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/9_List_Functions.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +24,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/10_Tuple.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/3_Operators.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/5_Input_Output_Statements.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/6_Flow_Control.py" root0="SKIP_INSPECTION" />
@@ -55,6 +55,7 @@
   "keyToString": {
     "Notification.DisplayName-DoNotAsk-WindowsDefender": "Microsoft Defender configuration",
     "Notification.DoNotAsk-WindowsDefender": "true",
+    "Python.10_Tuple.executor": "Run",
     "Python.1_Python_Identifiers.executor": "Run",
     "Python.2_Python_Data_Types.executor": "Run",
     "Python.3_Operators.executor": "Run",
