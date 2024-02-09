@@ -157,7 +157,7 @@
 
 # customCount()
 # # write a program to print various indices where
-# # a given substring is present in a given
+# # a given substring is present in a given string
 
 # # customCount Method: using for loop
 # # --> works only if we are looking for a character only
@@ -176,18 +176,18 @@
 #     start = 0
 #     end = len(userInput)
 #     L =[]
-#     count = 0
+#     i = 0
 #     while True:
 #         position = userInput.find(subString, start, end)
 #         if position == -1:
-#             print('No. of Occurrences :', count)
+#             print('No. of Occurrences :', i)
 #             break
 #             # can use flag also instead of break
 #         else:
 #             L.append(position)
-#             # can also store positions in a list
-#             start = position + len(subString)     # This one is unique
-#             count += 1
+#             # can also use a count variable instead of list
+#             start = position + len(subString)    # This one is unique
+#             i += 1
 #     return L
 
 # userInput = input('Enter a String : ')
@@ -730,26 +730,87 @@
 # output = ''.join(sorted(output))
 # print(output.replace(' ',''))
 
-# Program 13: Find No. of Occurrences of Each Character
-# present in a given string in sorted order
-s = sorted(input('Enter a String : ').upper())
-d = {}
-for i in s:
-    if i != ' ':
-        if i not in d:
-            d[i] = 1
+# # Program 13: Find No. of Occurrences of Each Character
+# # present in a given string in sorted order
+# s = sorted(input('Enter a String : ').upper())
+# d = {}
+# for i in s:
+#     if i != ' ':
+#         if i not in d:
+#             d[i] = 1
+#         else:
+#             d[i] += 1
+#
+# for i in d:
+#     print(i,':',d[i])
+
+# # Program 14: Find if the given word is a Palindrome or not
+# # Hint: reviver
+# s = input('Enter a String : ').lower()
+# s1 = s[::-1]
+# if s == s1:
+#     print('{} is a Palindrome.'.format(s))
+# else:
+#     print('{} is not a Palindrome.'.format(s))
+# # easy peasy
+
+# Program 15 : String Formatting (HackerRank)
+# print(10)
+# print(bin(10)[2:])
+# print(oct(10)[2:])
+# print(hex(10)[2:].upper())
+n = int(input('Enter the value of n : '))
+max_length = len(bin(n)[2:])
+# print(max_length)
+result1 = []
+result2 = []
+result3 = []
+result4 = []
+# decimal formatting
+for i in range(1,n+1):
+    decimal = str(i)
+    if len(decimal) < max_length:
+        no_of_spaces = max_length - len(decimal)
+        result1 += [' '*no_of_spaces + decimal + ' ']
+# octal formatting
+for i in range(1,n+1):
+    octal = oct(i)[2:]
+    if len(octal) < max_length:
+        no_of_spaces = max_length - len(octal)
+        result2 += [' '*no_of_spaces + octal + ' ']
+# hexadecimal formatting
+for i in range(1,n+1):
+    hexa = hex(i)[2:].upper()
+    if len(hexa) < max_length:
+        no_of_spaces = max_length - len(hexa)
+        result3 += [' '*no_of_spaces + hexa + ' ']
+# binary formatting
+for i in range(1, n + 1):
+    binary_value = (bin(i)[2:])
+    # print(binary_value)
+    if len(binary_value) <= max_length:
+        no_of_spaces = max_length - len(binary_value)
+        # print(no_of_spaces)
+        # print(no_of_spaces)
+        if no_of_spaces:
+            result4 += [' '*no_of_spaces + binary_value]
         else:
-            d[i] += 1
-
-for i in d:
-    print(i,':',d[i])
-
-# Program 14: Find if the given word is a Palindrome or not
-# Hint: reviver
-s = input('Enter a String : ').lower()
-s1 = s[::-1]
-if s == s1:
-    print('{} is a Palindrome.'.format(s))
-else:
-    print('{} is not a Palindrome.'.format(s))
-# easy peasy
+            result4 += [binary_value]
+# final_result = '{}\n{}\n{}\n{}'.format(result1,result2,result3,result4)
+# print(final_result)
+# print(result1)
+# print(result2)
+# print(result3)
+# print(result4)
+final_list = []
+for i in range(len(result1)):
+    final_list.append(result1[i])
+for i in range(len(result2)):
+    final_list[i] += result2[i]
+for i in range(len(result3)):
+    final_list[i] += result3[i]
+for i in range(len(result4)):
+    final_list[i] += result4[i]
+# print(final_list)
+for i in final_list:
+    print(i)
