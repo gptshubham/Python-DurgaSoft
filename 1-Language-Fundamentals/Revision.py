@@ -97,3 +97,57 @@
 #         break
 #     i+=1
 # print(count)
+
+# Sets
+# s = {'s','k','g'}
+
+# s.add((1,2,3))
+# print(s)
+
+# s.add([4,5,6])
+# print(s)
+
+# s.add({4,5,6})
+# print(s)               # ***** Surprise!
+
+# d = {10:'Sachin',7:'Dhoni',18:'Kohli'}
+
+# s.add(d)
+# print(s)
+
+# s.update(d)
+# print(s)
+
+# s.update({4,5,6})
+# print(s)
+
+# s.update([4,5,6])
+# print(s)
+
+# s = {'s','k','g'}
+#
+# popped_item = s.pop()
+# print(s)
+# print(popped_item)
+#
+# popped_item = s.pop()
+# print(s)
+# print(popped_item)
+#
+# popped_item = s.pop()
+# print(s)
+# print(popped_item)
+#
+# if s:
+#     popped_item = s.pop()
+#     print(s)
+#     print(popped_item)
+# else:
+#     print('Invalid Operation: pop from empty set!')
+
+# s = {'s','k','g'}
+# s.discard('m')
+# print(s)
+
+# s.clear()
+# print(s)

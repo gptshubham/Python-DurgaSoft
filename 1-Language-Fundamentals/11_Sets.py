@@ -118,3 +118,80 @@
 # print(id(s1))
 # print(id(s2))
 # print(id(s3))
+
+# # Mathematical Operations on Set
+# s1 = {1,2,3,7}
+# s2 = {1,3,4,5,6,8,9}
+# # print(s1+s2)         # unsupported operand
+# # print(s1*3)          # unsupported operand
+#
+# # .union() vs. |
+# print(s1.union(s2))
+# print(s1 | s2)
+#
+# # .intersection() vs. &
+# print(s1.intersection(s2))
+# print(s1 & s2)
+#
+# # .difference() vs. -
+# print(s1.difference(s2))
+# print(s1 - s2)
+# print(s2.difference(s1))
+# print(s2 - s1)
+#
+# # .symmetric_difference() vs. ^
+# print(s1.symmetric_difference(s2))
+# print(s1 ^ s2)
+
+# # Membership Operators --> applicable
+
+# # Set Comprehension
+# s = {x**3 for x in range(5)}
+# print(s)
+# print(type(s))
+
+# # identity vs. equality
+# s1 = {1,2,3}
+# s2 = {1,2,3}
+# print(s1 is s2)
+# s3 = s1
+# print(s1 is s3)
+# s4 = {3,2,1}
+# print(s1 == s4)
+# print(s2 == s4)
+# print(s3 == s4)
+
+# # write a program to delete duplicates present in the list
+#
+# L = eval(input('Enter a list : '))
+# # ['dhoni','kohli','sachin','rohit','kohli','kohli','sachin']
+# s = set(L)
+# L = list(s)
+# L.sort()
+# print(L)
+#
+# # what if we want the same order as the original list
+# L = eval(input('Enter a list : '))
+# L1 = []
+# for i in L:
+#     if i not in L1:
+#         L1.append(i)
+# print(L1)
+
+# # write a program to print different vowels
+# # present in the given word
+#
+# # using set operations
+# word = set(input('Enter any word : ').lower())   # YouTubeInstagramLinkedInTwitter
+# vowels_list = {'a','e','i','o','u'}
+# result = word & vowels_list
+# print(result)
+#
+# # using list and loops
+# word = input('Enter any word : ').lower()
+# vowels_list = ['a','e','i','o','u']
+# result = []
+# for i in vowels_list:
+#     if i in word:
+#         result += [i]
+# print(result)
