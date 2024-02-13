@@ -285,3 +285,138 @@
 #         d[i] = d.get(i,0) + 1
 #
 # print(d)
+
+# Program : write a program to accept student name and marks
+# from the keyboard and with that data create a dictionary and
+# also display student marks by taking student name as input
+
+# # creation of dictionary
+# marks = {}
+# while True:
+#     key = input('Enter Student Name : ')
+#     value = int(input('Enter Student Marks : '))
+#     marks[key] = value
+#     option = input('More Student? [y|n] : ').lower()
+#     while option not in ('y', 'n'):
+#         print('Invalid Input!')
+#         option = input('More Student? [y|n] : ').lower()
+#         if option == 'n':
+#             break
+#     if option == 'n':
+#         break
+# print('Name\t\tMarks')
+# print('#'*17)
+# for key in marks:
+#     print('{}\t\t{}'.format(key,marks[key]))
+# print('#'*17)
+#
+# # display of name
+# while True:
+#     name = input('Enter Student Name : ')
+#     if name in marks:
+#         print("Marks of {} : {}".format(name,marks[name]))
+#     else:
+#         print('Student Not Found!')
+#     option = input('Check Again? [y|n] : ').lower()
+#     while option not in ('y','n'):
+#         option = input('Invalid Input! Please Select Valid Input [y|n] : ')
+#     if option == 'n':
+#         break
+
+# # Dictionary Comprehension
+#
+# # squares Example
+# squares = {x:x**2 for x in range(1, 6)}
+# print(squares)
+# print(type(squares))
+#
+# # dubles Example
+# dubles = {x:x*2 for x in range(1,6)}
+# print(dubles)
+# print(type(dubles))
+#
+# # alphabets Example
+# alphabets = {x:chr(64 + x) for x in range(1, 27)}
+# print(alphabets)
+# print(type(alphabets))
+
+# Merging of Collections
+
+# # List
+# L1 = [10,20,30]
+# L2 = [70,80,90]
+# L3 = L1 + L2
+# print(L3)
+# # Alternatively using *
+# L4 = [*L1,*L2]
+# print(L4)
+# # Merging lists to create set
+# s = {*L1,*L2}
+# print(s)
+# # Merging lists to create tuple
+# t = (*L1,*L2)
+# print(t)
+
+# # Tuple
+# t1 = ('dhoni','kohli')
+# t2 = ('sachin','rohit')
+# t3 = t1 + t2
+# print(t3)
+# # Alternatively using *
+# t4 = (*t1,*t2)
+# print(t4)
+# # Merging tuples to crate List
+# l = [*t1,*t2]
+# print(l)
+# # Merging tuples to create set
+# s = {*t1,*t2}
+# print(s)
+
+# # Set
+# s1 = {'hardik','sky'}
+# s2 = {'gill','rahul'}
+# # s3 = s1 + s2
+# # print(s3)        # TypeError: unsupported operand
+# # using *
+# s4 = {*s1,*s2}
+# print(s4)
+# # Merging sets to create list
+# l = [*s1,*s2]
+# # Merging sets to create tuple
+# print(l)
+# t = (*s1,*s2)
+# print(t)
+
+# # Merging lists,tuples and sets to create List
+# L = [*L4,*t4,*s4]
+# print(L)
+# # Merging lists,tuples and sets to create tuple
+# T = (*L4,*t4,*s4)
+# print(T)
+# # Merging lists,tuples and sets to create set
+# S = {*L4,*t4,*s4}
+# print(S)
+#
+# # Merging of Dictionaries
+# d1 = {7:'Dhoni',18:'Kohli'}
+# d2 = {10:'Sachin',45:'Rohit'}
+# d3 = {1:'KL',8:'Jadeja'}
+# d4 = {**d1,**d2,**d3}
+# print(d4)
+
+# # Nested Collections
+#
+# # Example 1: display 1.20, 2.60
+# L1 = [(10,20,30),(40,55,60)]
+# print(L1[0][1])
+# print(L1[1][-1])
+#
+# # Example 2: display 1.BMW, 2.all mobile brand names
+# d = {
+#     'cars':('Mercedes','BMW','Lanborghini'),
+#     'mobiles':('Apple','Samsung','Nothing')
+# }
+# # display second car
+# print(d['cars'][1])
+# for mobile in d.get('mobiles'):
+#     print(mobile)
