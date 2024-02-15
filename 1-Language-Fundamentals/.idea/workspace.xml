@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1fa73a39-766b-4527-b335-a916d54591c6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/12_Dictionary.py" beforeDir="false" afterPath="$PROJECT_DIR$/12_Dictionary.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +26,7 @@
     <setting file="file://$PROJECT_DIR$/10_Tuple.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/11_Sets.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/12_Dictionary.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/13_Functions.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/3_Operators.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/5_Input_Output_Statements.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/6_Flow_Control.py" root0="SKIP_INSPECTION" />
@@ -60,6 +60,7 @@
     &quot;Python.10_Tuple.executor&quot;: &quot;Run&quot;,
     &quot;Python.11_Sets.executor&quot;: &quot;Run&quot;,
     &quot;Python.12_Dictionary.executor&quot;: &quot;Run&quot;,
+    &quot;Python.13_Functions.executor&quot;: &quot;Run&quot;,
     &quot;Python.1_Python_Identifiers.executor&quot;: &quot;Run&quot;,
     &quot;Python.2_Python_Data_Types.executor&quot;: &quot;Run&quot;,
     &quot;Python.3_Operators.executor&quot;: &quot;Run&quot;,
