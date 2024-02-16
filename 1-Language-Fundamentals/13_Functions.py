@@ -241,9 +241,9 @@
 # print(sumIt())
 
 # # Positional Argument and Variable Length Argument Combination
-# def sumOf(n, *s):
+# def sumOf(n, *args):
 #     print(n)
-#     print(s)
+#     print(args)
 #
 # sumOf(10)
 # sumOf(10,20,30,40,50)
@@ -252,8 +252,8 @@
 # # value is passed along with Keyword ==> Keyword Argument
 
 # # Keyword Argument and Variable Length Argument Combination
-# def sumit(*s, n):
-#     print(s)
+# def sumit(*args, n):
+#     print(args)
 #     print(n)
 #
 # # sumof(10)
@@ -266,17 +266,42 @@
 # # argument we should provide value using Keyword Only.
 
 # # Default Arguments and Variable Length Arguments Combination
-# def sumof(n=0,*s):
+# def sumof(n=0,*args):
 #     print(n)
-#     print(s)
+#     print(args)
 # sumof(7777)
 # sumof(7777,20)
 # sumof(7777,20,30,40,50)
 #
-# def sumit(*s,n=0):
+# def sumit(*args,n=0):
 #     print(n)
-#     print(s)
+#     print(args)
 # sumit(10)
 # sumit(10,20)
 # sumit(10,20,30,40,50)
 # sumit(10,20,30,n=7777)
+
+# **kwargs
+def display(**kwargs):
+    print(type(kwargs))
+    print(kwargs)
+    print('#' * 20)
+    print('keys\t\tvalues')
+    print('----\t\t------')
+    for (k,v) in kwargs.items():
+        print('{}\t\t{}'.format(k,v))
+    print('#'*20)
+
+display(Dhoni=7,Sachin=10,Kohli=18,Rohit=45)
+display(name='shubham',age=22,gender='male',address='India')
+
+# using *args and **kwargs together
+def printIt(*args,**kwargs):
+    print(type(args))
+    print(args)
+    print(type(kwargs))
+    for (k,v) in kwargs.items():
+        print('{} : {}'.format(k,v))
+
+printIt(7,10,18,45,Dhoni=7,Sachin=10,Kohli=18,Rohit=45)
+
