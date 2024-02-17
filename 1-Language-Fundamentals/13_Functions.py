@@ -281,27 +281,51 @@
 # sumit(10,20,30,40,50)
 # sumit(10,20,30,n=7777)
 
-# **kwargs
-def display(**kwargs):
-    print(type(kwargs))
-    print(kwargs)
-    print('#' * 20)
-    print('keys\t\tvalues')
-    print('----\t\t------')
-    for (k,v) in kwargs.items():
-        print('{}\t\t{}'.format(k,v))
-    print('#'*20)
+# # **kwargs
+# def display(**kwargs):
+#     print(type(kwargs))
+#     print(kwargs)
+#     print('#' * 20)
+#     print('keys\t\tvalues')
+#     print('----\t\t------')
+#     for (k,v) in kwargs.items():
+#         print('{}\t\t{}'.format(k,v))
+#     print('#'*20)
+#
+# display(Dhoni=7,Sachin=10,Kohli=18,Rohit=45)
+# display(name='shubham',age=22,gender='male',address='India')
 
-display(Dhoni=7,Sachin=10,Kohli=18,Rohit=45)
-display(name='shubham',age=22,gender='male',address='India')
+# # using *args and **kwargs together
+# def printIt(*args,**kwargs):
+#     print(type(args))
+#     print(args)
+#     print(type(kwargs))
+#     for (k,v) in kwargs.items():
+#         print('{} : {}'.format(k,v))
+#
+# printIt(7,10,18,45,Dhoni=7,Sachin=10,Kohli=18,Rohit=45)
 
-# using *args and **kwargs together
-def printIt(*args,**kwargs):
-    print(type(args))
-    print(args)
-    print(type(kwargs))
-    for (k,v) in kwargs.items():
-        print('{} : {}'.format(k,v))
+# Types of Variables (Variable Scopes)
 
-printIt(7,10,18,45,Dhoni=7,Sachin=10,Kohli=18,Rohit=45)
+# Global vs Local Variables
+a = 10          # global variable
+def f1():
+    a = 7       # local variable
+    print('Local variable Value :',a)
+    print('Globla Variable Value :',globals()['a'])
 
+def f2():
+    global b    # global keyword --> global variable
+    b = 18
+    print(a)
+
+def f3():
+    c = 45
+    print(b)
+
+f1()
+f2()
+f3()
+print(a)
+print(b)
+# print(c)      # NameError: name 'c' is not defined
