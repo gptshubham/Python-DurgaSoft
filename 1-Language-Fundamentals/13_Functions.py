@@ -305,27 +305,96 @@
 #
 # printIt(7,10,18,45,Dhoni=7,Sachin=10,Kohli=18,Rohit=45)
 
-# Types of Variables (Variable Scopes)
+# # Types of Variables (Variable Scopes)
+#
+# # Global vs Local Variables
+# a = 10          # global variable
+# def f1():
+#     a = 7       # local variable
+#     print('Local variable Value :',a)
+#     print('Globla Variable Value :',globals()['a'])
+#
+# def f2():
+#     global b    # global keyword --> global variable
+#     b = 18
+#     print(a)
+#
+# def f3():
+#     c = 45
+#     print(b)
+#
+# f1()
+# f2()
+# f3()
+# print(a)
+# print(b)
+# # print(c)      # NameError: name 'c' is not defined
 
-# Global vs Local Variables
-a = 10          # global variable
-def f1():
-    a = 7       # local variable
-    print('Local variable Value :',a)
-    print('Globla Variable Value :',globals()['a'])
+# # whether b is a loval variable or global variable
+# a = 10
+# for i in range(1):
+#     b = 20
+# print(a,b)
 
-def f2():
-    global b    # global keyword --> global variable
-    b = 18
-    print(a)
+# Recursive Functions
 
-def f3():
-    c = 45
-    print(b)
+# # write a python function to find factorial of a given number using recursion
+# def factorial(n):
+#     print(f'Finding factorial of {n}')
+#     # stop condition
+#     if n == 0:
+#         result = 1
+#     else:
+#         result = n*factorial(n-1)
+#     print(f'Completion of finding factorial of {n} and result is {result}')
+#     return result
+# print('Factorial of 5 is :',factorial(5))
+# # print('Factorial of 6 is :',factorial(6))
 
-f1()
-f2()
-f3()
-print(a)
-print(b)
-# print(c)      # NameError: name 'c' is not defined
+# # write a function to find the Fibonacci series of n where n>2
+# def fibonacci(n):
+#     if n==0:
+#         return 0
+#     elif n==1 or n==2:
+#         return 1
+#     else:
+#         return fibonacci(n-1) + fibonacci(n-2)
+#
+# for i in range(10):
+#     print(fibonacci(i),end=' ')
+
+# # Anonymous Functions/ Lambda Functions
+#
+# # write a function to return square of given value
+#
+# # normal function
+# def squareIt(n):
+#     return n**2
+#
+# num = int(input('Enter a Number to Square : '))
+# print(squareIt(num))
+#
+# # Anonymous/Lambda Function
+# s = lambda n:n*n
+# num = int(input('Enter a Number to Square : '))
+# print(s(num))
+# print(type(s))
+#
+# # lambda function to find sum of two given numbers
+# num1 = int(input('Enter the first number : '))
+# num2 = int(input('Enter the second number : '))
+# s = lambda n1,n2:n1+n2
+# print(f'The Sum of {num1} and {num2} =',s(num1,num2))
+#
+# # find biggest of two numbers using lambda functions
+# num1 = int(input('Enter the first number : '))
+# num2 = int(input('Enter the second number : '))
+# s = lambda n1,n2:n1 if n1>n2 else n2
+# print(f'Biggest of {num1} and {num2} is',s(num1,num2))
+#
+# # find biggest of three numbers using lambda functions
+# num1 = int(input('Enter the first number : '))
+# num2 = int(input('Enter the second number : '))
+# num3 = int(input('Enter the third number : '))
+# s = lambda n1,n2,n3:n1 if n1>n2 and n1>n3 else n2 if n2>n3 else n3
+# print(f'The Biggest of {num1}, {num2} and {num3} is',s(num1,num2,num3))
