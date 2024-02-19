@@ -151,3 +151,10 @@
 
 # s.clear()
 # print(s)
+
+# # lambda function
+#
+# # write a function to return square of given value
+# s = lambda n:n**2
+# print(s(7))
+

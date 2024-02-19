@@ -336,6 +336,7 @@
 #     b = 20
 # print(a,b)
 
+
 # Recursive Functions
 
 # # write a python function to find factorial of a given number using recursion
@@ -363,8 +364,9 @@
 # for i in range(10):
 #     print(fibonacci(i),end=' ')
 
+
 # # Anonymous Functions/ Lambda Functions
-#
+
 # # write a function to return square of given value
 #
 # # normal function
@@ -379,22 +381,84 @@
 # num = int(input('Enter a Number to Square : '))
 # print(s(num))
 # print(type(s))
-#
+
 # # lambda function to find sum of two given numbers
 # num1 = int(input('Enter the first number : '))
 # num2 = int(input('Enter the second number : '))
 # s = lambda n1,n2:n1+n2
 # print(f'The Sum of {num1} and {num2} =',s(num1,num2))
-#
+
 # # find biggest of two numbers using lambda functions
 # num1 = int(input('Enter the first number : '))
 # num2 = int(input('Enter the second number : '))
 # s = lambda n1,n2:n1 if n1>n2 else n2
 # print(f'Biggest of {num1} and {num2} is',s(num1,num2))
-#
+
 # # find biggest of three numbers using lambda functions
 # num1 = int(input('Enter the first number : '))
 # num2 = int(input('Enter the second number : '))
 # num3 = int(input('Enter the third number : '))
 # s = lambda n1,n2,n3:n1 if n1>n2 and n1>n3 else n2 if n2>n3 else n3
 # print(f'The Biggest of {num1}, {num2} and {num3} is',s(num1,num2,num3))
+
+
+# filter()
+
+# # given a list of numbers filter the even numbers
+#
+# # without lambda function
+# def is_even(n):
+#     if n%2==0:
+#         return True
+#     else:
+#         return False
+#
+# L = [0,10,15,20,25,30,35,40,45]
+# output = list(filter(is_even,L))
+# print(output)
+#
+# # with lambda function
+# L = [0,10,15,20,25,30,35,40,45]
+# evens = list(filter(lambda n: n%2==0, L))
+# odds = tuple(filter(lambda n:n%2!=0,L))
+# print(evens)
+# print(odds)
+
+# # input: tuple of strings | output: tuple of strings where len(str) >= 3
+# t = ('A','AA','AAA','AAAA','AAAAA')
+# output = tuple(filter(lambda s:len(s)>=3,t))
+# print(output)
+
+
+# map()
+
+# # given a list of numbers generate a list of squares of its values
+#
+# # without lambda function
+# def squareIt(n):
+#     return n**2
+#
+# L = [1,2,3,4,5]
+# suare_list = list(map(squareIt,L))
+# print(suare_list)
+#
+# # with lambda function
+# L = [1,2,3,4,5]
+# suare_list = list(map(lambda n:n**2,L))
+# print(suare_list)
+
+# # generate output by multiplying values from both lists
+# L1 = [1,2,3,4]
+# L2 = (10,20,30,40,50,60)     #***** Surprise!
+# output = list(map(lambda n1,n2:n1*n2,L1,L2))
+# print(output)       # [10, 40, 90, 160]
+
+
+# reduce()
+
+# # generate the product of all list items
+# from functools import reduce
+# L = [1,2,3,4,5]
+# print(sum(L))
+# output = reduce(lambda n,m:n*m,L)
+# print(output)
