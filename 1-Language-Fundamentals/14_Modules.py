@@ -36,31 +36,31 @@
 
 # # Module Naming Conflicts
 #
-# from Module1 import *
-# from Module2 import *
+# from module1 import *
+# from module2 import *
 #
 # add(30,20)
 #
 #
-# from Module2 import *
-# from Module1 import *
+# from module2 import *
+# from module1 import *
 #
 # add(30,20)
 #
 #
-# from Module2 import *
-# from Module1 import *
+# from module2 import *
+# from module1 import *
 # def add(a,b):
 #     print('Current Module add function')
 #     print('The Sum:',a+b)
 # add(30,20)
 #
 #
-# from Module2 import *
+# from module2 import *
 # def add(a,b):
 #     print('Current Module add function')
 #     print('The Sum:',a+b)
-# from Module1 import *
+# from module1 import *
 #
 # add(30,20)
 #
@@ -70,41 +70,98 @@
 # How to solve Naming Conflict
 
 # # Method 1 : don't import member import module only
-# import Module1
-# import Module2
-# Module1.add(30,20)
-# Module2.add(3,2)
+# import module1
+# import module2
+# module1.add(30,20)
+# module2.add(3,2)
 #
 # # Method 2 : import members with different aliased names
-# from Module1 import add as a1
-# from Module2 import add as a2
+# from module1 import add as a1
+# from module2 import add as a2
 # a1(30,20)
 # a2(3,2)
 
 # # Reloading of Module
 #
 # import time
-# import Module1
-# Module1.add(30,20)
+# import module1
+# module1.add(30,20)
 # print('program entering into sleeping state')
 # time.sleep(45)
 # print('waking up and calling updated function')
-# import Module1
-# Module1.subtract(30,20)
-# # AttributeError: module 'Module1' has no attribute 'subtract'
+# import module1
+# module1.subtract(30,20)
+# # AttributeError: module 'module1' has no attribute 'subtract'
 
 # # How to solve this problem
 #
 # import importlib
 # import time
-# import Module1
-# Module1.add(30,20)
+# import module1
+# module1.add(30,20)
 # print('program entering into sleeping state')
 # time.sleep(45)
 # print('waking up and calling updated function')
-# importlib.reload(Module1)
-# import Module1
-# Module1.subtract(30,20)
+# importlib.reload(module1)
+# import module1
+# module1.subtract(30,20)
 
 
+# how to find members of a module
 
+# dir()
+
+a = 10
+b = 20
+def add(a,b):
+    return a+b
+def product(a,b):
+    return a*b
+
+# print(dir())
+
+# import math
+# print(dir(math))
+
+# # help
+# import math
+# help(math)
+
+# help()
+
+# special variables in Python Modules  --> __doc__, __file__, __name__
+
+# print(__annotations__)
+# print(__builtins__)
+# print(__cached__)
+# print(__doc__)
+# print(__file__)
+# print(__loader__)
+# print(__name__)
+# print(__package__)
+# print(__spec__)
+
+__doc__
+
+print(__doc__)
+import math
+print(math.__doc__)
+import random
+# print(random.__doc__)
+
+__file__
+
+print('Absolute Path:',__file__)
+import os
+print('Relative Path:',os.path.relpath(__file__))
+print('Directory Name:',os.path.dirname(__file__))
+
+__name__
+
+# indirect execution of Module3
+import module3               # module3 ==> Indirect Execution
+print('Current Module')
+
+# import module3
+print('we require only some functions but not all')
+module3.f1()

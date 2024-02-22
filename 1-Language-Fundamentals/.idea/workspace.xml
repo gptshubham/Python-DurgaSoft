@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1fa73a39-766b-4527-b335-a916d54591c6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/14_Modules.py" beforeDir="false" afterPath="$PROJECT_DIR$/14_Modules.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,8 +76,10 @@
     "Python.Converter.executor": "Run",
     "Python.Math_Module.executor": "Run",
     "Python.Module.executor": "Run",
+    "Python.Module3.executor": "Run",
     "Python.Revision.executor": "Run",
     "Python.demo.executor": "Run",
+    "Python.module3.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "full.screen.before.presentation.mode": "true",
