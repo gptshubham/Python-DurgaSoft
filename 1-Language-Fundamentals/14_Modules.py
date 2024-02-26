@@ -279,6 +279,7 @@ __name__
 # # Alternatively : Shortcut Method
 # print(choice(alphabets),randint(0,9),choice(alphabets),randint(0,9),choice(alphabets),randint(0,9),choice(alphabets),randint(0,9),sep='')
 
+'''
 # Program 4: write a program to generate fake employee data for database testing
 
 from random import *
@@ -365,3 +366,34 @@ n = int(input('Enter the No. of Employees : '))
 for i in range(n):
     get_fake_emm_data()
     print()
+'''
+
+# # working with math module
+#
+# from math import *
+#
+# print(sqrt(4))
+# print(ceil(10.1))
+# print(floor(10.1))
+# print(fabs(10.6))
+# print(fabs(-10.6))
+#
+# # Ex.1: convert -12.345 into 12
+# print(floor(fabs(-12.345)))  # 12
+# print(fabs(floor(-12.345)))  # 13.0
+# print(floor(-12.345))        # -13
+# print(fabs(ceil(-12.345)))   # 12.0
+#
+# # Ex.2: You are writing an application that uses sqrt function.
+# # The program must reference the function using the name sq.
+# from math import sqrt as sq
+# print(sq(4))
+#
+# # Ex.3:
+# import math
+# L = [str(round(math.pi)) for i in range(1,6)]
+# print(L)       # ['3', '3', '3', '3', '3']
+#
+# # import math
+# # print(dir(math))
+# # help(math)
