@@ -17,10 +17,5 @@ def otp():
     # printing output
     return otp
 
-    # # Alternatively : Shortcut Method 😎 All Hail Time and Space Complexity
-    # print(randint(0,9),randint(0,9),randint(0,9),randint(0,9),randint(0,9),randint(0,9),sep='')
-
-    # # Alternatively : Ultra Shortcut -> Not Preferred as it can't generate otps starting from 0 like 000000,000001 etc.
-    # print(randint(100000,999999))
 
 # print(otp())

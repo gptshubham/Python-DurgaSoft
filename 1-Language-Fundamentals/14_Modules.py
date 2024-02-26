@@ -143,25 +143,139 @@ def product(a,b):
 
 __doc__
 
-print(__doc__)
-import math
-print(math.__doc__)
-import random
-# print(random.__doc__)
+# print(__doc__)
+# import math
+# print(math.__doc__)
+# import random
+# # print(random.__doc__)
 
 __file__
 
-print('Absolute Path:',__file__)
-import os
-print('Relative Path:',os.path.relpath(__file__))
-print('Directory Name:',os.path.dirname(__file__))
+# print('Absolute Path:',__file__)
+# import os
+# print('Relative Path:',os.path.relpath(__file__))
+# print('Directory Name:',os.path.dirname(__file__))
 
 __name__
 
-# indirect execution of Module3
-import module3               # module3 ==> Indirect Execution
-print('Current Module')
+# # indirect execution of Module3
+# import module3               # module3 ==> Indirect Execution
+# print('Current Module')
 
-# import module3
-print('we require only some functions but not all')
-module3.f1()
+# # import module3
+# print('we require only some functions but not all')
+# module3.f1()
+
+
+# working with random module
+
+# import random
+# L = dir(random)
+# print(L)
+#
+# help(random)
+
+# from random import *
+
+# # random()
+# for i in range(10):
+#     print(random())
+
+# # uniform()
+# for i in range(10):
+#     print(uniform(1,100))
+
+# # randint()
+# for i in range(10):
+#     print(randint(1,10000))
+
+# # randrange()
+# for i in range(10):
+#     print(randrange(1,11,2),end=' ')
+# print()
+# for i in range(10):
+#     print(randrange(0,11,2),end=' ')
+# print()
+# for i in range(10):
+#     print(randrange(0,100,10),end=' ')
+
+# # choice()
+# L = ['Dhoni','Kohli','Sachin','Rohit','SKY','Gill','Hardik']
+# for i in range(10):
+#     print(choice(L))
+
+# # Program 1: generate a random alphabet symbol
+# from random import choice
+# # print(ord('A'))  # 65
+# # print(ord('Z'))  # 90
+# # print(ord('a'))    # 97
+# # print(ord('z'))    # 122
+#
+# # creating a list of alphabet symbols
+# alphabets = []
+# for i in range(ord('A'),ord('Z')+1):
+#     alphabets.append(chr(i))
+# for i in range(ord('a'),ord('z')+1):
+#     alphabets.append(chr(i))
+#
+# # confirming list
+# # print(alphabets)
+#
+# # generating random alphabets from the list using choice()
+# for i in range(10):
+#     print(choice(alphabets), end=' ')
+
+
+# # Program 2: OTP Generation
+# # generate a 6 digit random number which can used as OTP
+#
+# from random import randint
+# # creating an Empty list 'otp'
+# otp = []
+# # generating OTP using for loop and randint()
+# for i in range(6):
+#     otp.append(randint(0,9))
+# # confirming otp list
+# print(otp)
+# # converting int values of otp list into string using map()
+# otp = list(map(str,otp))
+# print(otp)
+# # joining otp
+# otp = ''.join(otp)
+# # printing output
+# print(otp)
+#
+# # Alternatively : Shortcut Method 😎 All Hail Time and Space Complexity
+# print(randint(0,9),randint(0,9),randint(0,9),randint(0,9),randint(0,9),randint(0,9),sep='')
+#
+# # Alternatively : Ultra Shortcut -> Not Preferred as it can't generate otps starting from 0 like 000000,000001 etc.
+# print(randint(100000,999999))
+
+
+# # Program 3: Password Generation
+# # generate random password of 8 length where 1st, 3rd, 5ht and 7th
+# # are alphabet symbols and 2nd, 4th, 6th and 8th are digits
+#
+# from random import *
+# # creating alphabet list using for loop, ord() and chr()
+# alphabets = []
+# for i in range(ord('A'),ord('Z')+1):
+#     alphabets.append(chr(i))
+# for i in range(ord('a'),ord('z')+1):
+#     alphabets.append(chr(i))
+# # creating digits range odject
+# digits = range(0,9)
+# # creating password variable
+# password = ''
+# # creating password using for loop, str concatenation,and choice()
+# for i in range(1,9):
+#     if i%2 == 0:
+#         password += str(choice(digits))
+#     else:
+#         password += choice(alphabets)
+# # printing output
+# print(password)
+#
+# # Alternatively : Shortcut Method
+# print(choice(alphabets),randint(0,9),choice(alphabets),randint(0,9),choice(alphabets),randint(0,9),choice(alphabets),randint(0,9),sep='')
+

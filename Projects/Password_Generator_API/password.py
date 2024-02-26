@@ -1,20 +1,17 @@
 # Password Generation API Mini Project
 
-# generate random password of given length (>= 8) where even index positions are
-# alphabet symbols and odd index positions are digits
+# generate random password of given length (>= 8) where even index
+# positions are alphabet symbols and odd index positions are digits
 
 from random import *
-
 # creating alphabet list
 alphabets = []
 for i in range(ord('A'),ord('Z')+1):
     alphabets.append(chr(i))
 for i in range(ord('a'),ord('z')+1):
     alphabets.append(chr(i))
-
 # creating digits range odject
 digits = range(0,9)
-
 # password function
 def password(n):
     # length validation
