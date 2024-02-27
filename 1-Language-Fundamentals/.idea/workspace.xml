@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fa73a39-766b-4527-b335-a916d54591c6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/com/.idea/com.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package1/.idea/package1.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14_Modules.py" beforeDir="false" afterPath="$PROJECT_DIR$/14_Modules.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,41 +56,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Notification.DisplayName-DoNotAsk-WindowsDefender&quot;: &quot;Microsoft Defender configuration&quot;,
-    &quot;Notification.DoNotAsk-WindowsDefender&quot;: &quot;true&quot;,
-    &quot;Python.10_Tuple.executor&quot;: &quot;Run&quot;,
-    &quot;Python.11_Sets.executor&quot;: &quot;Run&quot;,
-    &quot;Python.12_Dictionary.executor&quot;: &quot;Run&quot;,
-    &quot;Python.13_Functions.executor&quot;: &quot;Run&quot;,
-    &quot;Python.14_Modules.executor&quot;: &quot;Run&quot;,
-    &quot;Python.1_Python_Identifiers.executor&quot;: &quot;Run&quot;,
-    &quot;Python.2_Python_Data_Types.executor&quot;: &quot;Run&quot;,
-    &quot;Python.3_Operators.executor&quot;: &quot;Run&quot;,
-    &quot;Python.5_Input_Output_Statements.executor&quot;: &quot;Run&quot;,
-    &quot;Python.6_Flow_Control.executor&quot;: &quot;Run&quot;,
-    &quot;Python.7_Pattern_Programs.executor&quot;: &quot;Run&quot;,
-    &quot;Python.8_String_Functions.executor&quot;: &quot;Run&quot;,
-    &quot;Python.9_List_Functions.executor&quot;: &quot;Run&quot;,
-    &quot;Python.9_List_Methods.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Converter.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Math_Module.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Module.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Module3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Revision.executor&quot;: &quot;Run&quot;,
-    &quot;Python.demo.executor&quot;: &quot;Run&quot;,
-    &quot;Python.module3.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Shubham/Durgasoft/Python/1-Language-Fundamentals/14_Modules.py&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Notification.DisplayName-DoNotAsk-WindowsDefender": "Microsoft Defender configuration",
+    "Notification.DoNotAsk-WindowsDefender": "true",
+    "Python.10_Tuple.executor": "Run",
+    "Python.11_Sets.executor": "Run",
+    "Python.12_Dictionary.executor": "Run",
+    "Python.13_Functions.executor": "Run",
+    "Python.14_Modules.executor": "Run",
+    "Python.15_Packages.py.executor": "Run",
+    "Python.1_Python_Identifiers.executor": "Run",
+    "Python.2_Python_Data_Types.executor": "Run",
+    "Python.3_Operators.executor": "Run",
+    "Python.5_Input_Output_Statements.executor": "Run",
+    "Python.6_Flow_Control.executor": "Run",
+    "Python.7_Pattern_Programs.executor": "Run",
+    "Python.8_String_Functions.executor": "Run",
+    "Python.9_List_Functions.executor": "Run",
+    "Python.9_List_Methods.executor": "Run",
+    "Python.Converter.executor": "Run",
+    "Python.Math_Module.executor": "Run",
+    "Python.Module.executor": "Run",
+    "Python.Module3.executor": "Run",
+    "Python.Revision.executor": "Run",
+    "Python.demo.executor": "Run",
+    "Python.module3.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "full.screen.before.presentation.mode": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Shubham/Durgasoft/Python/1-Language-Fundamentals/15_Packages.py",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
-    <configuration name="14_Modules" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="15_Packages.py" type="PythonConfigurationType" factoryName="Python">
       <module name="1-Language-Fundamentals" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -102,7 +105,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/14_Modules.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/15_Packages.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
