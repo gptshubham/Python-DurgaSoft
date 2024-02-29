@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fa73a39-766b-4527-b335-a916d54591c6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/com/.idea/com.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package1/.idea/package1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/1-Language-Fundamentals.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/1-Language-Fundamentals.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +37,7 @@
     <setting file="file://$PROJECT_DIR$/8_String_Functions.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/9_List_Methods.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Converter.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../test.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProblemsViewState">
     <hideBySeverity>
@@ -82,17 +83,19 @@
     "Python.Revision.executor": "Run",
     "Python.demo.executor": "Run",
     "Python.module3.executor": "Run",
+    "Python.setup.py.executor": "Run",
+    "Python.test.py.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "full.screen.before.presentation.mode": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Shubham/Durgasoft/Python/1-Language-Fundamentals/15_Packages.py",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+    "last_opened_file_path": "C:/Shubham/Durgasoft/test.py",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors"
   }
 }]]></component>
   <component name="RunManager">
-    <configuration name="15_Packages.py" type="PythonConfigurationType" factoryName="Python">
+    <configuration name="test.py" type="PythonConfigurationType" factoryName="Python">
       <module name="1-Language-Fundamentals" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -105,7 +108,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/15_Packages.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -118,7 +121,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-5a2391486177-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.13763.11" />
+        <option value="bundled-python-sdk-d68999036c7f-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.14475.56" />
       </set>
     </attachedChunks>
   </component>

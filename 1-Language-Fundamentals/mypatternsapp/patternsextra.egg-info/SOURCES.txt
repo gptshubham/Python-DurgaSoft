@@ -1,0 +1,9 @@
+setup.py
+com/__init__.py
+com/module1.py
+patterns/__init__.py
+patterns/shapes.py
+patternsextra.egg-info/PKG-INFO
+patternsextra.egg-info/SOURCES.txt
+patternsextra.egg-info/dependency_links.txt
+patternsextra.egg-info/top_level.txt
