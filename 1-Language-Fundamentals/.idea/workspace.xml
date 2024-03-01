@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fa73a39-766b-4527-b335-a916d54591c6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/1-Language-Fundamentals.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/1-Language-Fundamentals.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,6 +80,7 @@
     "Python.Module3.executor": "Run",
     "Python.Revision.executor": "Run",
     "Python.demo.executor": "Run",
+    "Python.main.py.executor": "Run",
     "Python.module3.executor": "Run",
     "Python.setup.py.executor": "Run",
     "Python.test.py.executor": "Run",
@@ -90,12 +89,12 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "full.screen.before.presentation.mode": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Shubham/Durgasoft/test.py",
+    "last_opened_file_path": "C:/Shubham/Durgasoft/Python/1-Language-Fundamentals/16_File_Handling.py",
     "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors"
   }
 }]]></component>
   <component name="RunManager">
-    <configuration name="test.py" type="PythonConfigurationType" factoryName="Python">
+    <configuration name="main.py" type="PythonConfigurationType" factoryName="Python">
       <module name="1-Language-Fundamentals" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -108,7 +107,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/16_File_Handling.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
