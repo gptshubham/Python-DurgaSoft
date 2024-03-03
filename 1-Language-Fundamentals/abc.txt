@@ -1,4 +1,19 @@
-Hello Friends!
-Learning Python is very easy!
-If you are facing any difficulty, then your basics are not up to the mark.
-Identify your weak points and give left and right.
+Name : Pradeep
+Gender : M
+Date of Birth : 3 Jun, 2002
+Mobile Number : xxx7252826
+
+Name : Versha
+Gender : F
+Date of Birth : 2 Mar, 2001
+Mobile Number : xxx5242824
+
+Name : Divya
+Gender : F
+Date of Birth : 22 Mar, 2003
+Mobile Number : xxx6546889
+
+Name : Thomas
+Gender : M
+Date of Birth : 21 Jun, 2003
+Mobile Number : xxx4242736

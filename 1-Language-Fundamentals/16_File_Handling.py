@@ -20,7 +20,7 @@
 # # Printing data
 # print(data)
 # f.close()
-# print()
+
 # # # file Properties and various modes
 
 # # 'r' mode --> Existing File
@@ -32,7 +32,6 @@
 # print('Is File Closed: ',f.closed)
 # f.close()
 # print('Is File Closed: ',f.closed)
-# print()
 
 # # 'r' mode --> Non-Existing File
 # f=open('xyz.txt')                 # FileNotFoundError
@@ -163,4 +162,108 @@
 # print('Is File Closed: ',f.closed)
 # f.close()
 # print('Is File Closed: ',f.closed)
+
+
+# writing data to text files
+
+# # write()
+# f = open('abc.txt','w')
+# f.write('Dhoni\n')
+# f.write('Kohli\n')
+# f.write('Sachin\n')
+# f.write('Rohit\n')
+# print('Data written to the file successfully')
+# f.close()
+
+# # write() --> Non-Existing File
+# f = open('abc020324.txt','w')         # new file created
+# f.write('Dhoni ')
+# f.write('Kohli ')
+# f.write('Sachin ')
+# f.write('Rohit ')
+# print('Data written to the file successfully')
+# f.close()
+
+# # writelines() --> list
+# f = open('abc.txt','w')
+# L = ['Dhoni\n','Kohli\n','Sachin\n','Rohit\n','Rahul']
+# f.writelines(L)
+# print('Data written to the file successfully')
+# f.close()
+
+# # writelines() --> set
+# f = open('abc.txt','w')
+# s = {'Dhoni\n','Kohli\n','Sachin\n','Rohit\n','Rahul\n'}
+# f.writelines(s)
+# print('Data written to the file successfully')
+# f.close()
+
+# # writelines() --> tuple
+# f = open('abc.txt','w')
+# t = ('Dhoni\n','Kohli\n','Sachin\n','Rohit\n','Rahul')
+# f.writelines(t)
+# print('Data written to the file successfully')
+# f.close()
+
+# # writelines() --> dict
+# f = open('abc.txt','w')
+# # d = {7: 'Dhoni',18:'Kohli',10:'Sachih',45:'Rohit'}
+# # TypeError: write() argument must be str, not int
+# d = {'7': 'Dhoni','18':'Kohli','10':'Sachih','45':'Rohit'}
+# f.writelines(d)
+# print('Data written to the file successfully')
+# f.close()
+
+# # creating file in a particular folder
+# f = open('C:\\Shubham\\Durgasoft\\Python\\1-Language-Fundamentals\\test_files\\xyz.txt','w')   # *** \\
+# f.write('First Line\n')
+# f.write('Second Line\n')
+# f.write('Third Line\n')
+# print('Data written to the file successfully')
+# f.close()
+
+
+# # Writing Dynamic Data to the Dynamic File
+#
+# file_name = input('Enter File Name : ')
+# f = open('C:\\Shubham\\Durgasoft\\Python\\1-Language-Fundamentals\\test_files\\studentdata\\'+file_name,'w')
+# while True:
+#     data = input('Enter data to write : ')
+#     f.write(data+'\n')
+#     option = input('More Data ? [Y|N] : ')
+#     if option.lower() == 'n':
+#         break
+# print('Data written successfully!')
+# f.close()
+
+# Reading data from a file
+
+# read()
+f = open('abc.txt')
+data = f.read()
+print(data)
+f.close()
+print()
+
+# read(n)
+f =open('abc.txt')
+print(f.read(5))
+print(f.read(5))
+f.seek(0)
+print(f.read(15))
+f.close()
+print()
+
+# readline()
+f = open('abc.txt')
+data = f.readline()
+print(data,end='')
+data = f.readline()
+print(data,end='')
+data = f.readline()
+print(data,end='')
+data = f.readline()
+print(data,end='')
+
+# readlines()
 
