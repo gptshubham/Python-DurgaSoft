@@ -236,34 +236,92 @@
 # print('Data written successfully!')
 # f.close()
 
-# Reading data from a file
+# # Reading data from a file
 
-# read()
-f = open('abc.txt')
-data = f.read()
-print(data)
-f.close()
-print()
+# # read()
+# f = open('abc.txt')
+# data = f.read()
+# print(data)
+# f.close()
+# print()
 
-# read(n)
-f =open('abc.txt')
-print(f.read(5))
-print(f.read(5))
-f.seek(0)
-print(f.read(15))
-f.close()
-print()
+# # read(n)
+# f =open('abc.txt')
+# print(f.read(5))
+# print(f.read(5))
+# f.seek(0)
+# print(f.read(15))
+# f.close()
+# print()
 
-# readline()
-f = open('abc.txt')
-data = f.readline()
-print(data,end='')
-data = f.readline()
-print(data,end='')
-data = f.readline()
-print(data,end='')
-data = f.readline()
-print(data,end='')
+# # readline()
+# f = open('abc.txt')
+# data = f.readline()
+# print(data,end='')
+# data = f.readline()
+# print(data,end='')
+# data = f.readline()
+# print(data,end='')
+# data = f.readline()
+# print(data,end='')
 
-# readlines()
+# # readline() with while loop
+# f = open('test_files\\studentdata\\Varsha.txt')
+# line = f.readline()
+# while line:
+#     print(line,end='')
+#     line = f.readline()
+# f.close()
+
+# # skipping blank lines
+# f = open('abc.txt')
+# line = f.readline()
+# while line:
+#     if line != '\n':
+#         print(line,end='')
+#     line = f.readline()
+# f.close()
+
+# # readlines()
+# f = open('abc.txt')
+# lines = f.readlines()
+# print(type(lines))
+# for line in lines:
+#     if line != '\n':
+#         print(line,end='')
+# f.close()
+
+# # where is my pointer
+# f = open('abc.txt')
+# print(f.read(4))
+# print(f.readline())
+# print(f.read(14))
+# print(f.read())
+
+# # Use case 1: Read data from input.txt and write to output.txt
+# # reading data from input.txt
+# f1 = open('test_files\\input.txt')
+# f2 = open('test_files\\output.txt','w')
+# data = f1.read()
+# f2.write(data)
+# f1.close()
+# f2.close()
+
+# # with statement
+#
+# # data read from input.txt
+# with open('test_files\\input.txt') as f:
+#     data = f.read()
+#     print('data read from input.txt:')
+#     print(data)
+#     print('Is file closed: ',f.closed)
+# print('Is file closed: ',f.closed)
+# print()
+# # data written to output.txt
+# with open('test_files\\output.txt') as f:
+#     data = f.read()
+#     print('data written to output.txt:')
+#     print(data)
+#     print('Is file closed: ',f.closed)
+# print('Is file closed: ',f.closed)
 
