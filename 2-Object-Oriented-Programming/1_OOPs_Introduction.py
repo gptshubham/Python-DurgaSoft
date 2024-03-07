@@ -3,7 +3,7 @@
     # Properties ( Variables) --> name, marks, roll no
     # actions (methods)
 
-
+'''
 class Student:
     def __init__(self):
         print('Constructor Execution...')
@@ -54,7 +54,7 @@ s2 = Student('Mohit',110,95)
 print('Student 2:',s2.name,s2.rollno,s2.marks)
 
 
-# self variable --> always refers to current object
+# Everything about Self Variable --> always refers to current object
 class Test:
     def __init__(self):
         print('Id of object reffered by self:', id(self))
@@ -96,3 +96,121 @@ class Test:
 # # TypeError: Test.__init__() got multiple values for argument 'x'
 t = Test()
 print('Id of object reffered by t:',id(t))
+'''
+
+
+# Everything about Constructors
+
+class Test:
+    def __init__(self,count):
+        print('Constructor Execution...',count)
+
+t1 = Test(1)
+t2 = Test(2)
+t3 = Test(3)
+t4 = Test(4)
+t5 = Test(5)
+
+# main purpose of Constructor --> Instance Variable
+class Student:
+    def __init__(self,name,rollno,marks):
+        self.name=name
+        self.rollno=rollno
+        self.marks=marks
+
+s1 = Student('Shubham',101,91)
+
+# s2 = Student('Abhi',102,95,'male')
+# TypeError: Student.__init__() takes 4 positional arguments but 5 were given
+# s3 = Student('Mohit',103)
+# TypeError: Student.__init__() missing 1 required positional argument: 'marks'
+
+# Constructor is Optional
+class Test:
+    def m1(self):
+        print('Method Execution...')
+
+t = Test()
+t.m1()
+
+# Calling Constructor Explicitly
+class Test:
+    def __init__(self,note):
+        print('Constructor Execution...','Id:',id(self),note)
+
+t = Test('object creation')
+t.__init__('Calling Constructor Explicitly')
+t.__init__('Calling Constructor Explicitly')
+
+# Method or Constructor Overloading --> not supported by Python
+# PVM will always consider only the most recent one
+class Test:
+    def __init__(self):
+        print('no-arg constructor')
+    def __init__(self,x):
+        print('one-arg constructor')
+
+# t = Test() --> Invalid
+# TypeError: Test.__init__() missing 1 required positional argument: 'x'
+t = Test(10)
+
+class Test:
+    def __init__(self,name):
+        self.name=name
+
+t = Test('Shubh')
+print(t.name)
+t.__init__('Abhi')
+print(t.name)
+t.__init__('Mohit')
+print(t.name)
+
+# Doubt : multiple classes , multiple methods, which one is gonna change
+# if we call __init__() explicitly multiple times with different objects
+# conclusion: depends on the object
+
+class Test:
+    def __init__(self,name):
+        self.name=name
+
+class Demo:
+    def __init__(self,name):
+        self.name=name
+
+t = Test('Mohit')
+d = Demo('David')
+t.__init__('Shubh')   # Mohit will be replaced by Shubh
+d.__init__('Abhi')    # David will be replaced by Abhi
+
+# Doubt : what if we have a function and a class with same name
+# not a good progrmming practice
+def Test():
+    print('Test Function...')
+
+class Test:
+    def Test(self):
+        print('Test Method inside Test Class...')
+
+
+t = Test()
+t.Test()
+Test()        # overwritten by Test Class
+print(Test())
+t.Test()
+
+class Test:
+    def Test(self):
+        print('Test Method inside Test Class...')
+
+def Test():
+    print('Test Function...')
+
+
+Test()
+t = Test()
+# t.Test()       # overwritten by Test() Function
+# AttributeError: 'NoneType' object has no attribute 'Test'
+print(t)         # function does not return anything
+
+# Constructor vs Method --> Notes
+# basis - Name, Execution, No. of Executions, Role
