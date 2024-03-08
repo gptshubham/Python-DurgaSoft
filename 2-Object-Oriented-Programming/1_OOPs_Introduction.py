@@ -98,7 +98,7 @@ t = Test()
 print('Id of object reffered by t:',id(t))
 '''
 
-
+'''
 # Everything about Constructors
 
 class Test:
@@ -214,3 +214,109 @@ print(t)         # function does not return anything
 
 # Constructor vs Method --> Notes
 # basis - Name, Execution, No. of Executions, Role
+'''
+
+"""
+# Mini Application : Movie
+class Movie:
+    '''Movie Class developed by Shubham for Python demo purpose'''
+    def __init__(self, title, hero, heroine):
+        self.title=title
+        self.hero=hero
+        self.heroine=heroine
+    def info(self):
+        print('Movie Name:',self.title)
+        print('Hero:',self.hero)
+        print('Heroine:',self.heroine)
+
+# creating multiple objects of Movie Class with Dynamic Information
+list_of_movies = []
+while True:
+    title = input('Enter movie name: ')
+    hero = input('Enter Hero of the movie: ')
+    heroine = input('Enter heroine of the movie: ')
+    m = Movie(title,hero,heroine)
+    list_of_movies.append(m)
+    print('Movie added to the list successfully!')
+    option = input('Add Another Movie [Yes|No]: ')
+    if option.lower() == 'no':
+        break
+
+print('All Movies Information...')
+print('#'*40)
+for movie in list_of_movies:
+    movie.info()
+    print()
+
+
+m1 = 'Bahubali Prabhas Anushka'
+m2 = 'Sultan Salman Anushka'
+m3 = 'Jawan SRK Nayanthara'
+m4 = 'Dangal Aamir Fatima Sana Shaikh'
+"""
+
+
+# Types of Variables --> instance , static and local
+
+# Instance Variable --> value varies from object to object
+class Student:
+    def __init__(self,name='Guest',rollno=0):
+        self.name=name          # instance variable
+        self.rollo=rollno       # instance variable
+
+s = Student('Shubham',101)
+# accessing the value of instance variable
+print(s.name)
+print(s.rollo)
+
+# Static Variable --> value is constant for all objects
+class Student:
+    collegeName = 'IIT Madras'  # static variable
+    def __init__(self,name='Guest',rollno=0):
+        self.name=name         # instance variable
+        self.rollo=rollno      # instance variable
+
+# accessing the value of static variable
+print(Student.collegeName)   # --> Recommended
+s = Student()
+print(s.collegeName)
+# no need to create object to access static variables hence not recommended
+
+# Local Variable --> declared inside a method directly
+# to meet temporary requirements of the programmer
+
+class Student:
+    collegeName = 'IIT Madras'  # static variable
+    def __init__(self,name='Guest',rollno=0):
+        self.name=name          # instance variable
+        self.rollo=rollno       # instance variable
+    def m1(self):
+        x = 10                 # x is local variable
+        for i in range(x):     # i is local variable
+            print(i,end=' ')
+        print()
+
+s = Student()
+s.m1()
+
+
+# Types of Methods
+# Instance Method --> uses at least one instance variable
+class Student:
+    collegeName = 'IIT Madras'
+    def __init__(self,name='Guest',rollno=0):
+        self.name=name
+        self.rollo=rollno
+
+    def getStudentInfo(self):
+        print('Student Name: ',self.name)
+        print('Student RollNo: ',self.rollo)
+
+s = Student('Abhi',102)
+# calling instance methods
+s.getStudentInfo()
+# Student.getStudentInfo()
+# TypeError: Student.getStudentInfo() missing 1 required positional argument: 'self'
+
+# If Method uses no instance variable --> class method or static method
+# Class Method --> uses any class variable
