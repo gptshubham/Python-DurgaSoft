@@ -1,3 +1,4 @@
+'''
 # let's recreate the Student class from scratch
 class Student:
     def __init__(self):
@@ -22,3 +23,28 @@ s2 = Student()
 print(id(s1))
 print(id(s2))
 print(s1 is s2)
+'''
+
+# Instance Variables
+class Test:
+    def __init__(self):
+        self.a = 10
+
+    def m1(self):
+        self.a = 20
+        self.b = 30
+
+    def m2(self):
+        self.e = 60
+        self.f = 70
+
+t = Test()
+print(t.__dict__)
+t.m1()
+print(t.__dict__)
+t.a = 40
+t.c = 50
+print(t.__dict__)
+# accessing instance variables
+print(t.a,t.b,t.c)
+

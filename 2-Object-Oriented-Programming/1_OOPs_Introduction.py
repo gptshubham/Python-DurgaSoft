@@ -1,8 +1,14 @@
-# class Student:
-    # ''' doc_string '''  --> optional
-    # Properties ( Variables) --> name, marks, roll no
-    # actions (methods)
+"""
+class Student:
+    ''' doc_string '''  # optional
+    #Properties ( Variables)  # name, marks, roll no
+    #actions (methods)
+print(Student.__doc__)
+help(Student)
+"""
 
+# Syntactical Example of a Class and Objects
+'''
 class Student:
     def __init__(self):
         print('Constructor Execution...')
@@ -14,8 +20,6 @@ class Student:
         print('My Roll No. is',self.rollno)
         print('My Marks is',self.marks)
 
-print(Student.__doc__)
-# help(Student)
 
 # creating object
 s1 = Student()
@@ -31,9 +35,10 @@ s1.talk()
 print(id(s1))
 print(id(s2))
 print(s1 is s2)
-
+'''
 
 # Passing Value to Constructor
+'''
 class Student:
     def __init__(self,name,rollno,marks): # parameters: self,name,rollono,marks
         self.name=name
@@ -51,9 +56,13 @@ s1 = Student('Abhi',100,99)
 print('Student 1:',s1.name,s1.rollno,s1.marks)
 s2 = Student('Mohit',110,95)
 print('Student 2:',s2.name,s2.rollno,s2.marks)
-
+s1.talk()
+s2.talk()
+'''
 
 # Everything about Self Variable --> always refers to current object
+'''
+
 class Test:
     def __init__(self):
         print('Id of object reffered by self:', id(self))
@@ -62,8 +71,6 @@ t = Test()
 print('Id of object reffered by t:',id(t))
 t1 = Test()
 print('Id of object reffered by t1:',id(t1))
-s1.talk()
-s2.talk()
 
 
 # self is not a keyword we can use any name instead of self
@@ -95,11 +102,10 @@ class Test:
 # # TypeError: Test.__init__() got multiple values for argument 'x'
 t = Test()
 print('Id of object reffered by t:',id(t))
-
-
+'''
 
 # Everything about Constructors
-
+'''
 class Test:
     def __init__(self,count):
         print('Constructor Execution...',count)
@@ -140,8 +146,10 @@ class Test:
 t = Test('object creation')
 t.__init__('Calling Constructor Explicitly')
 t.__init__('Calling Constructor Explicitly')
+'''
 
 # Method or Constructor Overloading --> not supported by Python
+'''
 # PVM will always consider only the most recent one
 class Test:
     def __init__(self):
@@ -163,11 +171,12 @@ t.__init__('Abhi')
 print(t.name)
 t.__init__('Mohit')
 print(t.name)
+'''
 
 # Doubt : multiple classes , multiple methods, which one is gonna change
 # if we call __init__() explicitly multiple times with different objects
 # conclusion: depends on the object
-
+'''
 class Test:
     def __init__(self,name):
         self.name=name
@@ -180,9 +189,11 @@ t = Test('Mohit')
 d = Demo('David')
 t.__init__('Shubh')   # Mohit will be replaced by Shubh
 d.__init__('Abhi')    # David will be replaced by Abhi
+'''
 
 # Doubt : what if we have a function and a class with same name
 # not a good progrmming practice
+'''
 def Test():
     print('Test Function...')
 
@@ -213,10 +224,10 @@ print(t)         # function does not return anything
 
 # Constructor vs Method --> Notes
 # basis - Name, Execution, No. of Executions, Role
-
-
+'''
 
 # Mini Application : Movie
+"""
 class Movie:
     '''Movie Class developed by Shubham for Python demo purpose'''
     def __init__(self, title, hero, heroine):
@@ -252,11 +263,10 @@ m1 = 'Bahubali Prabhas Anushka'
 m2 = 'Sultan Salman Anushka'
 m3 = 'Jawan SRK Nayanthara'
 m4 = 'Dangal Aamir Fatima Sana Shaikh'
-
-
+"""
 
 # Types of Variables --> instance , static and local
-
+'''
 # Instance Variable --> value varies from object to object
 class Student:
     def __init__(self,name='Guest',rollno=0):
@@ -297,10 +307,10 @@ class Student:
 
 s = Student()
 s.m1()
-
+'''
 
 # Types of Methods
-
+'''
 # Instance Method --> uses at least one instance variable
 class Student:
     collegeName = 'IIT Madras'
@@ -317,10 +327,12 @@ print('calling instance methods...')
 s.getStudentInfo()
 # Student.getStudentInfo()
 # TypeError: Student.getStudentInfo() missing 1 required positional argument: 'self'
+'''
 
 # If Method uses no instance variable --> class method or static method
 
 # Class Method --> uses any class variable and @classmethod
+'''
 class Student:
     collegeName = 'IIT Madras'
     director = 'Andrew Thangaraj'
@@ -358,9 +370,10 @@ print('cls memory address vs. class memory address...')
 print(id(Test))
 Test.m1()
 Test.m2()
-
+'''
 
 # Static Methods --> No Instance or Static Variables used
+'''
 class Student:
     collegeName = 'IIT Madras'
     director = 'Andrew Thangaraj'
@@ -390,8 +403,12 @@ print('Calling Static Method...')
 score = Student.getScore(95,95,98,90)
 print('Average Score:',score)
 # Everything about Instance Variable
+'''
 
-# How to declare Instance Variable
+# Everythind about Instance Variables
+
+# How to declare Instance Variables
+'''
 class Test:
     def __init__(self,a,b):     # inside constructor using self
         self.a = a
@@ -413,8 +430,10 @@ t2 = Test(111,222)
 print(t2.__dict__)
 t2.d = 444
 print(t2.__dict__)
+'''
 
 # How to access Instance Variables
+'''
 class Test:
     def __init__(self,a,b):
         self.a = a
@@ -427,8 +446,10 @@ t = Test(10,20)
 t.m1()
 print(t.a)                      # accessing instance variable within the class
 print(t.b)
+'''
 
 # How to delete Instance Variables
+'''
 class Test:
     def __init__(self,a,b,c,d):
         self.a = a
@@ -444,7 +465,9 @@ t.m1()
 print(t.__dict__)
 del t.b,t.c                   # deleting instance variable from outside the class
 print(t.__dict__)
+'''
 
+'''
 # Instance Variable deleted form one object will not be deleted from other object
 class Test:
     def __init__(self,a,b,c,d):
@@ -460,7 +483,9 @@ del t1.a
 print(t1.__dict__)
 t2 = Test(11,22,33,44)
 print(t2.__dict__)
+'''
 
+'''
 # Changing the values of instance variable of one object won't affect the values for the remaining objects
 class Test:
     def __init__(self):
@@ -473,3 +498,172 @@ t1.a = 888
 t1.b = 999
 print(t1.__dict__)
 print(t2.__dict__)
+'''
+
+# Everything about Static Variables - Declaration, Access, Update, Deletion
+
+# Where and How to Declare Static Variables
+'''
+class Test:
+    a = 10    # within the class directly but outside of any method (generally)
+    def __init__(self):
+        Test.b = 20      # within the constructor using class name
+
+    def m1(self):        # within instance method using class name
+        Test.c = 30
+
+    @classmethod
+    def m2(cls):        # within class method using class name or cls
+        Test.d = 40
+        cls.e = 50
+
+    @staticmethod       # within static method using class name    
+    def m3():           # (not recommended: not a good programming practice)
+        Test.f = 70
+
+print(Test.__dict__)
+t = Test()
+print(Test.__dict__)
+t.m1()
+print(Test.__dict__)
+Test.m2()
+print(Test.__dict__)
+Test.m3()
+print(Test.__dict__)
+Test.g = 80
+print(Test.__dict__)    # outside the class using class name 
+'''
+
+# How to Access Static Variables:
+'''
+# using class name to access static variables is good programming practice
+class Test:
+    a = 10
+    def __init__(self): # within constructor using self or class name
+        Test.b = 20
+        print('within constructor using self:',self.a)
+        print('within constructor using class name(recommended):',Test.a)
+    def m1(self):       # within instance method using self or class name
+        Test.c = 30
+        print('within instance method using self:',self.a)
+        print('within instance method using class name (recommnded):',Test.a)
+    @classmethod
+    def m2(cls):        # within class method using class name or cls
+        Test.d = 40
+        cls.e = 50
+        print('within class method using cls:',cls.a)
+        print('within class method using class name:',Test.a)
+    @staticmethod       # within static method using class name
+    def m3():           # (not recommended: not a good programming practice)
+        Test.f = 70
+        print('within static method using class name',Test.a)
+    
+print('Accessing Static Variables...')
+t = Test()
+t.m1()
+Test.m2()
+Test.m3()
+print('Outside the class using class name:',Test.a)
+'''
+
+# How to Update the value of Static Variable
+'''
+class Test:
+    a = 10
+    def __init__(self):
+        # within the constructor using class name
+        print(Test.a)
+        Test.a = 20
+        print(Test.a)
+    def m1(self):
+        # within instance method using class name
+        Test.a = 30
+        print(Test.a)
+    @classmethod
+    def m2(cls):
+        # within class method using class name or cls
+        Test.a = 40
+        print(cls.a)
+        cls.a = 50
+        print(cls.a)
+    @staticmethod
+    def m3():
+        # within static method using class name
+        # (not recommended: not a good programming practice)
+        Test.a = 60
+        print(Test.a)
+
+t = Test()
+t.m1()
+Test.m2()
+Test.m3()
+# Outside the Class using Class Name
+Test.a = 70
+print(Test.a)
+'''
+
+# Tricky Example 1
+'''
+class Test:
+    x = 10
+    def __init__(self):
+        self.y = 20
+
+t1 = Test()
+t2 = Test()
+print('t1:',t1.x,t1.y)
+print('t1 instance variables:',t1.__dict__)
+print('t2:',t2.x,t2.y)
+print('t2 instance variables:',t2.__dict__)
+t1.x = 888              # new instance variable 'x' is created
+t1.y = 999
+print('t1:',t1.x,t1.y)
+print('t1 instance variables:',t1.__dict__)
+Test.x = 888
+print('t2:',t2.x,t2.y)
+print('t2 instance variables:',t2.__dict__)
+'''
+
+# Tricky Example 2
+'''
+class Test:
+    x = 10
+    def __init__(self):
+        self.y = 20
+
+    def m1(self):
+        self.x = 888
+        self.y = 999
+
+t1 = Test()
+t2 = Test()
+t1.m1()
+print('t1:',t1.x,t1.y)      # 888 999
+print('t1 instance variables:',t1.__dict__)
+print('t2:',t2.x,t2.y)      # 10 20
+print('t2 instance variables:',t2.__dict__)
+'''
+
+# Tricky Example 3
+'''
+class Test:
+    x = 10
+    def __init__(self):
+        self.y = 20
+
+    @classmethod # remove this decorator and see the magic - head spinning effet
+    def m1(cls):
+        cls.x = 888
+        cls.y = 999
+
+t1 = Test()
+t2 = Test()
+print('t2:',t2.x,t2.y)      # 10 20
+print('t2 instance variables:',t2.__dict__)
+t1.m1()
+print('t1:',t1.x,t1.y)      # 888 20
+print('t1 instance variables:',t1.__dict__)
+print('t2:',t2.x,t2.y)      # 888 20
+print('t2 instance variables:',t2.__dict__)
+print('Static Variables:',Test.x,Test.y)
+'''
