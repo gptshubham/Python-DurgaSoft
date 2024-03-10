@@ -3,7 +3,6 @@
     # Properties ( Variables) --> name, marks, roll no
     # actions (methods)
 
-'''
 class Student:
     def __init__(self):
         print('Constructor Execution...')
@@ -96,9 +95,9 @@ class Test:
 # # TypeError: Test.__init__() got multiple values for argument 'x'
 t = Test()
 print('Id of object reffered by t:',id(t))
-'''
 
-'''
+
+
 # Everything about Constructors
 
 class Test:
@@ -214,9 +213,9 @@ print(t)         # function does not return anything
 
 # Constructor vs Method --> Notes
 # basis - Name, Execution, No. of Executions, Role
-'''
 
-"""
+
+
 # Mini Application : Movie
 class Movie:
     '''Movie Class developed by Shubham for Python demo purpose'''
@@ -253,7 +252,7 @@ m1 = 'Bahubali Prabhas Anushka'
 m2 = 'Sultan Salman Anushka'
 m3 = 'Jawan SRK Nayanthara'
 m4 = 'Dangal Aamir Fatima Sana Shaikh'
-"""
+
 
 
 # Types of Variables --> instance , static and local
@@ -301,6 +300,7 @@ s.m1()
 
 
 # Types of Methods
+
 # Instance Method --> uses at least one instance variable
 class Student:
     collegeName = 'IIT Madras'
@@ -309,14 +309,167 @@ class Student:
         self.rollo=rollno
 
     def getStudentInfo(self):
-        print('Student Name: ',self.name)
-        print('Student RollNo: ',self.rollo)
+        print('Student Name:',self.name)
+        print('Student RollNo:',self.rollo)
 
 s = Student('Abhi',102)
-# calling instance methods
+print('calling instance methods...')
 s.getStudentInfo()
 # Student.getStudentInfo()
 # TypeError: Student.getStudentInfo() missing 1 required positional argument: 'self'
 
 # If Method uses no instance variable --> class method or static method
-# Class Method --> uses any class variable
+
+# Class Method --> uses any class variable and @classmethod
+class Student:
+    collegeName = 'IIT Madras'
+    director = 'Andrew Thangaraj'
+    def __init__(self,name='Guest',rollno=0):
+        self.name=name
+        self.rollo=rollno
+
+    def getStudentInfo(self):
+        print('Student Name:',self.name)
+        print('Student RollNo:',self.rollo)
+
+    @classmethod
+    def getCollegeInfo(cls):
+        print('College Name:',cls.collegeName)
+        print('Director:',cls.director)
+
+s = Student('Shubham',101)
+print('calling instance methods...')
+s.getStudentInfo()
+print('Calling Class Method...')
+s.getCollegeInfo()
+
+
+# cls memory address vs. class memory address
+class Test:
+    @classmethod
+    def m1(cls):
+        print(id(cls))
+
+    @classmethod
+    def m2(cls):
+        print(id(cls))
+
+print('cls memory address vs. class memory address...')
+print(id(Test))
+Test.m1()
+Test.m2()
+
+
+# Static Methods --> No Instance or Static Variables used
+class Student:
+    collegeName = 'IIT Madras'
+    director = 'Andrew Thangaraj'
+    def __init__(self,name='Guest',rollno=0):
+        self.name=name
+        self.rollo=rollno
+
+    def getStudentInfo(self):
+        print('Student Name:',self.name)
+        print('Student RollNo:',self.rollo)
+
+    @classmethod
+    def getCollegeInfo(cls):
+        print('College Name:',cls.collegeName)
+        print('Director:',cls.director)
+
+    @staticmethod
+    def getScore(math,stat,eng,python):
+        return (math+stat+eng+python)/4
+
+s = Student('Shubham',101)
+print('Calling Instance Methods...')
+s.getStudentInfo()
+print('Calling Class Method...')
+Student.getCollegeInfo()
+print('Calling Static Method...')
+score = Student.getScore(95,95,98,90)
+print('Average Score:',score)
+# Everything about Instance Variable
+
+# How to declare Instance Variable
+class Test:
+    def __init__(self,a,b):     # inside constructor using self
+        self.a = a
+        self.b = b
+    def m1(self,c):             # inside instance method using self
+        self.c = c
+
+# t1 object
+t1 = Test(10,20)
+print(t1.__dict__)
+t1.m1(30)
+print(t1.__dict__)
+t1.d = 40                       # outside of the class using object reference
+t1.e = 50
+print(t1.__dict__)
+
+# t2 object
+t2 = Test(111,222)
+print(t2.__dict__)
+t2.d = 444
+print(t2.__dict__)
+
+# How to access Instance Variables
+class Test:
+    def __init__(self,a,b):
+        self.a = a
+        self.b = b
+    def m1(self):
+        print(self.a)            # accessing instance variable within the class
+        print(self.b)
+
+t = Test(10,20)
+t.m1()
+print(t.a)                      # accessing instance variable within the class
+print(t.b)
+
+# How to delete Instance Variables
+class Test:
+    def __init__(self,a,b,c,d):
+        self.a = a
+        self.b = b
+        self.c = c
+        self.d = d
+    def m1(self):
+        del self.a              # deleting instance variable within the class
+
+t = Test(10,20,30,40)
+print(t.__dict__)
+t.m1()
+print(t.__dict__)
+del t.b,t.c                   # deleting instance variable from outside the class
+print(t.__dict__)
+
+# Instance Variable deleted form one object will not be deleted from other object
+class Test:
+    def __init__(self,a,b,c,d):
+        self.a = a
+        self.b = b
+        self.c = c
+        self.d = d
+    def m1(self):
+        del self.a
+
+t1 = Test(10,20,30,40)
+del t1.a
+print(t1.__dict__)
+t2 = Test(11,22,33,44)
+print(t2.__dict__)
+
+# Changing the values of instance variable of one object won't affect the values for the remaining objects
+class Test:
+    def __init__(self):
+        self.a = 10
+        self.b = 20
+
+t1 = Test()
+t2 = Test()
+t1.a = 888
+t1.b = 999
+print(t1.__dict__)
+print(t2.__dict__)
