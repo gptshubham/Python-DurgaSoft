@@ -6,6 +6,7 @@ class Student:
 print(Student.__doc__)
 help(Student)
 """
+import sys
 
 # Syntactical Example of a Class and Objects
 '''
@@ -667,3 +668,137 @@ print('t2:',t2.x,t2.y)      # 888 20
 print('t2 instance variables:',t2.__dict__)
 print('Static Variables:',Test.x,Test.y)
 '''
+
+# How to Delete Static Variables
+
+# Example 1
+'''
+class Test:
+    a = 10
+    b = 20
+    @classmethod
+    def m1(cls):
+        del cls.a
+
+print(Test.__dict__)
+Test.m1()
+print(Test.__dict__)
+del Test.b
+print(Test.__dict__)
+'''
+
+# Example 2
+'''
+class Test:
+    a = 10
+    def __init__(self):
+        Test.b = 20
+        del Test.a
+
+    def m1(self):
+        Test.c = 30
+        del Test.b
+
+    @classmethod
+    def m2(cls):
+        cls.d = 40
+        del cls.c
+
+    @staticmethod
+    def m3():
+        Test.e = 50
+        del Test.d
+
+print(Test.__dict__)
+t = Test()
+print(Test.__dict__)
+t.m1()
+print(Test.__dict__)
+Test.m2()
+print(Test.__dict__)
+Test.m3()
+print(Test.__dict__)
+Test.f = 60
+print(Test.__dict__)
+del Test.e
+print(Test.__dict__)
+'''
+
+# Example 3 : Instance Method vs. Static Variables
+'''
+class Test:
+    x = 10
+    def __init__(self):
+        self.y = 20
+
+t1 = Test()
+t2 = Test()
+print('t1:',t1.x,t1.y)    # 10 20
+print('t2:',t2.x,t2.y)    # 10 20
+Test.x = 888
+t1.y = 999
+print('t1:',t1.x,t1.y)    # 888 999
+print('t2:',t2.x,t2.y)    # 888 20
+'''
+
+# Local Variables --> Method Level / Temporary Variables
+'''
+class Test:
+    def m1(self):
+        a = 100
+        print(a)
+
+    def m2(self):
+        b = 200
+        print(b)
+        # print(a)    # NameError: name 'a' is not defined
+
+t = Test()
+t.m1()
+t.m2()
+'''
+
+# Mini Bank Application
+"""
+import sys
+class Customer:
+    '''customer class to describle bank operations'''
+    bank_name = 'Kuber Bank'
+    def __init__(self,Name,balance=0.0):
+        self.Name = Name
+        self.balance = balance
+
+    def deposite(self,amt):
+        self.balance += amt
+        print('Updated Available Balace:',self.balance)
+
+    def withdrawal(self,amt):
+        if amt > self.balance:
+            print('Insufficient Balace to continue this operation!')
+            print('Thank You for Banking with Us!')
+            sys.exit()
+        else:
+            self.balance -= amt
+            print('Updated Available Balace:',self.balance)
+
+print('Welcome to',Customer.bank_name)
+name = input('Enter Your Name: ')
+c = Customer(name)
+while True:
+    print('d - Deposite\nw - Withdrawal\ne - Exit')
+    option = input('Choose Your Option: ')
+    if option == 'd' or option == 'D':
+        amount = float(input('Enter Amount to Deposit: '))
+        c.deposite(amount)
+    elif option == 'w' or option == 'W':
+        amount = float(input('Enter Amount to Withdraw: '))
+        while amount % 500 != 0:
+            print('Invalid Amount! Please Enter a Valid Amount! x500')
+            amount = float(input('Enter Amount to Withdraw: '))
+        c.withdrawal(amount)
+    elif option == 'e' or option == 'E':
+        print('Thank You for Banking with Us!')
+        break
+    else:
+        print('Invalid Operation! Please choose a valid operation!')
+"""
