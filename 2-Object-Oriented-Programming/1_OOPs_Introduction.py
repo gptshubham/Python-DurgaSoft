@@ -802,3 +802,119 @@ while True:
     else:
         print('Invalid Operation! Please choose a valid operation!')
 """
+
+# From Novice to Ninja: A Deep Dive into Python Instance and Class Methods
+
+'''
+# A Deep Dive into Python Instance Methods
+# self is a local variable, and it is optional to use name "self", we can use any name
+# However it's not a good programming practice to use any name other than "self"
+class Student:
+    def __init__(self,name,marks):
+        self.name = name
+        self.marks = marks
+
+    def display(self):
+        print('Hi',self.name)
+        print('Your marks:',self.marks)
+        # calling one instance method from another instance method
+        self.grade()
+
+    def grade(self):
+        if self.marks >= 60:
+            print('You got First Grade!')
+        elif self.marks >= 50:
+            print('You got Second Grade!')
+        elif self.marks >= 40:
+            print('You got Third Grade!')
+        else:
+            print('You have Failed!')
+
+
+n = int(input('Enter No. of Students : '))
+for i in range(n):
+    name = input('Enter Student Name : ')
+    marks = float(input('Enter Student Marks : '))
+    s = Student(name,marks)
+    s.display()
+    # s1.grade()
+'''
+
+# Setter and Getter Methods
+
+class Student:
+    def setName(self,name):
+        self.name=name
+        
+    def getName(self):
+        return self.name
+    
+    def setMarks(self,marks):
+        self.marks=marks
+        
+    def getMarks(self):
+        return self.marks
+
+
+n = int(input('Enter No. of Students : '))
+for i in range(n):
+    s = Student()
+    name = input('Enter Student Name : ')
+    s.setName(name)
+    marks = float(input('Enter Student Marks : '))
+    s.setMarks(marks)
+
+    print('Hi',s.getName())
+    print('Your Marks:',s.getMarks())
+    print()
+
+
+# validation code to initialize instance variables and access the data
+'''
+class Student:
+    def setName(self,name):
+        # validation code --> to be covered later
+        self.name=name
+    def setMarks(self,marks):
+        self.marks=marks
+    def getName(self):
+        # validation code --> to be covered later
+        return self.name
+    def getMarks(self):
+        return self.marks
+
+s = Student()
+s.setName('Shubham')
+s.setMarks(96)
+# print(s.name)        # dont try to access data directly
+# print(s.marks)       # security problem
+'''
+
+# A Deep Dive into Python Class Methods
+
+class Student:
+    collegeName = 'IIT Madras'
+    @classmethod
+    def getCollegeInfo(cls):
+        print('College Name:',cls.collegeName)
+
+Student.getCollegeInfo()
+
+# Write a program to track No. of Objects created for a class
+class Test:
+    count = 0
+    def __init__(self):
+        Test.count += 1
+    @classmethod
+    def getNoOfObjects(cls):
+        print('No. of Objects Created:',Test.count)
+
+Test.getNoOfObjects()
+t1 = Test()
+Test.getNoOfObjects()
+t2 = Test()
+Test.getNoOfObjects()
+t3 = Test()
+Test.getNoOfObjects()
+t4 = Test()
+Test.getNoOfObjects()
