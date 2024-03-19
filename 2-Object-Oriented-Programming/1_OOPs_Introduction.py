@@ -406,7 +406,7 @@ print('Average Score:',score)
 # Everything about Instance Variable
 '''
 
-# Everythind about Instance Variables
+# Everything about Instance Variables
 
 # How to declare Instance Variables
 '''
@@ -841,7 +841,7 @@ for i in range(n):
 '''
 
 # Setter and Getter Methods
-
+'''
 class Student:
     def setName(self,name):
         self.name=name
@@ -867,7 +867,7 @@ for i in range(n):
     print('Hi',s.getName())
     print('Your Marks:',s.getMarks())
     print()
-
+'''
 
 # validation code to initialize instance variables and access the data
 '''
@@ -891,7 +891,7 @@ s.setMarks(96)
 '''
 
 # A Deep Dive into Python Class Methods
-
+'''
 class Student:
     collegeName = 'IIT Madras'
     @classmethod
@@ -918,3 +918,90 @@ t3 = Test()
 Test.getNoOfObjects()
 t4 = Test()
 Test.getNoOfObjects()
+'''
+
+# Static Methods : using @staticmethod decorator is optional
+'''
+class ShubhMath:
+    def add(x,y):
+        print('The Sum:',x+y)
+    def product(x,y):
+        print('The Product:',x*y)
+    def average(x,y):
+        print('The Average:',(x+y)/2)
+
+ShubhMath.add(10,20)
+ShubhMath.product(10,20)
+ShubhMath.average(10,20)
+# s = ShubhMath()
+# s.average(10,20)
+# TypeError: ShubhMath.average() takes 2 positional arguments but 3 were given
+
+# Note: for static method @staticmethod decorator is optional. 
+# However if decorator is not used:
+# It acts as static method if called using class name
+# It acts as instance method if called using object reference
+'''
+
+# Passing Members of One Class to Another Class --> Access Members of One Class inside Another Class
+
+# Tricky Example 1
+class Employee:
+    def __init__(self,eno,ename,esal):
+        self.eno=eno
+        self.ename=ename
+        self.esal=esal
+    def display(self):
+        print('Employee No. :',self.eno)
+        print('Employee Name :',self.ename)
+        print('Employee Salary :',self.esal)
+class Manager:
+    def updateSalary(emp):             # Static Method
+        emp.esal+= 10000
+        emp.display()
+
+e = Employee(872425,'shubham',70000)
+Manager.updateSalary(e)
+
+# Tricky Example 2
+class Employee:
+    def __init__(self,eno):
+        self.eno=eno
+class Customer:
+    def __init__(self,cId):
+        self.cId=cId
+class Demo:
+    def m1(x):
+        print('The Type of x :',type(x))
+        print('Hello Employee Your Id is :',x.eno)
+    def m2(y):
+        print('The Type of c :',type(c))
+        print('Hello Customer Your Id is:',y.cId)
+
+e = Employee('e-101')
+c = Customer('c-7777')
+Demo.m1(e)
+# Demo.m1(c)
+# AttributeError: 'Customer' object has no attribute 'eno'
+# we can handle this error by using same variable name for both eno and cId as num
+Demo.m2(c)
+
+# Tricky Example 3:
+class Test:
+    def m1(x):
+        print('m1 of Test')
+
+class Demo:
+    def m1(y):
+        print('m1 of Demo')
+
+class Sample:
+    def m1(x,y):
+        x.m1()
+        y.m1()
+
+t = Test()
+d = Demo()
+Sample.m1(t,d)
+Sample.m1(d,t)
+Sample.m1(d,d)
