@@ -946,6 +946,7 @@ ShubhMath.average(10,20)
 # Passing Members of One Class to Another Class --> Access Members of One Class inside Another Class
 
 # Tricky Example 1
+'''
 class Employee:
     def __init__(self,eno,ename,esal):
         self.eno=eno
@@ -962,8 +963,10 @@ class Manager:
 
 e = Employee(872425,'shubham',70000)
 Manager.updateSalary(e)
+'''
 
 # Tricky Example 2
+'''
 class Employee:
     def __init__(self,eno):
         self.eno=eno
@@ -971,10 +974,10 @@ class Customer:
     def __init__(self,cId):
         self.cId=cId
 class Demo:
-    def m1(x):
+    def m1(x):                                        # Static Method
         print('The Type of x :',type(x))
         print('Hello Employee Your Id is :',x.eno)
-    def m2(y):
+    def m2(y):                                        # Static Method
         print('The Type of c :',type(c))
         print('Hello Customer Your Id is:',y.cId)
 
@@ -985,8 +988,10 @@ Demo.m1(e)
 # AttributeError: 'Customer' object has no attribute 'eno'
 # we can handle this error by using same variable name for both eno and cId as num
 Demo.m2(c)
+'''
 
 # Tricky Example 3:
+'''
 class Test:
     def m1(x):
         print('m1 of Test')
@@ -1005,3 +1010,146 @@ d = Demo()
 Sample.m1(t,d)
 Sample.m1(d,t)
 Sample.m1(d,d)
+'''
+
+# Inner Class / Nested Class
+
+# Example 1
+'''
+class University:
+    class Department:
+        pass
+
+# Example 2
+class Car:
+    class Engine:
+        pass
+
+# Example 3
+class Head:
+    class Brain:
+        pass
+'''
+
+# Theoritical Example of Inner Class
+'''
+class Outer:
+    def __init__(self):
+        print('Outer Class Object Creation...')
+    class Inner1:
+        def __init__(self):
+            print('Inner1 Class Object Creation...')
+        def m1(self):
+            print('Inner1 Class Method')
+    class Inner2:
+        def __init__(self):
+            print('Inner2 Class Object Creation...')
+        def m2(self):
+            print('Inner2 Class Method')
+# 1st Preference --> Provides all the Functionality of Outer and Inner classes
+print('#####...Inner Class Example...#####')
+o = Outer()
+i1 = o.Inner1()
+i1.m1()
+# # Alternatively
+i1 = Outer.Inner1()
+i1.m1()
+# Alternatively
+Outer().Inner1().m1()
+# Alternatively
+Outer.Inner1().m1()
+
+i2 = o.Inner2()
+i2.m2()
+'''
+
+# Nested Inner Classes - Theoretical Example
+'''
+class Outer:
+    def __init__(self):
+        print('Outer Class Object Creation...')
+    class Inner:
+        def __init__(self):
+            print('Inner Class Object Creation...')
+        class NesterInner:
+            def __init__(self):
+                print('Nested Inner Class Object Creation...')
+            def m1(self):
+                print('Nested Inner Class Method')
+
+print('#####...Nested Inner Class Example...#####')
+o = Outer()
+i = o.Inner()
+ni = i.NesterInner()
+ni.m1()
+'''
+
+# Nested Inner Classes - Logical Example 1
+'''
+class Human:
+    class Head:
+        def talk(self):
+            print('Talking...')
+        class Brain:
+            def think(self):
+                print('Thinking...')
+
+
+human = Human()
+head = human.Head()
+head.talk()
+brain = head.Brain()
+brain.think()
+'''
+
+# Nested Inner Classes - Logical Example 2: Human->Head->Brain
+'''
+class Human:
+    def __init__(self,name):
+        print('Human Object Creation...')
+        self.name=name
+        self.head=self.Head()               # very, very important line
+    def info(self):
+        print(f'Hello, This is {self.name}.')
+        print(f"I'm busy {self.head.brain.think()} and {self.head.talk()}.")
+    class Head:
+        def __init__(self):
+            print('Head Object Creation...')
+            self.brain=self.Brain()        # very, very important line
+        def talk(self):
+            return 'Talking'
+        class Brain:
+            def __init__(self):
+                print('Brain Object Creation...')
+            def think(self):
+                return 'Thinking'
+human = Human('Shubham')
+print(f'{human.name} is always {human.head.brain.think()} before {human.head.talk()}.')
+human.info()
+'''
+
+# Nested Inner Classes - Logical Example 3: Person->DOB
+'''
+class Person:
+    def __init__(self,name,dd,mm,yyyy):
+        print('Person Object Creation...')
+        self.dob=self.DOB(dd,mm,yyyy)
+        self.name=name
+
+    def info(self):
+        print(f'Name: {self.name}')
+        print(f'DOB: {self.dob.dd}:{self.dob.mm}:{self.dob.yyyy}')
+    class DOB:
+        def __init__(self,dd,mm,yyyy):
+            print('DOB Object Creation...')
+            self.dd=dd
+            self.mm=mm
+            self.yyyy=yyyy
+        def display(self):
+            print(f'DOB : {self.dd}/{self.mm}/{self.yyyy}')
+
+p = Person('shubham',15,8,1947)
+p.info()
+print(f'Name : {p.name}')
+p.dob.display()
+'''
