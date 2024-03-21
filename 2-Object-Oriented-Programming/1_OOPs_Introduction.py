@@ -1153,3 +1153,76 @@ p.info()
 print(f'Name : {p.name}')
 p.dob.display()
 '''
+
+# Nested Methods
+'''
+class Test:
+    def m1(self):
+        def calc(a,b):       # General Utility Method -> Static Method
+            print('Nested Method...')
+            print('The sum:', a + b)
+            print('The Difference:', a - b)
+            print('The Product:', a * b)
+            print('The Average:', (a + b) / 2)
+            print()
+        calc(10,20)
+        calc(100,200)
+        calc(1000,2000)
+t = Test()
+t.m1()
+'''
+
+# Nested Functions
+'''
+def f1():
+    def calc(a, b):
+        print('Nested Function...')
+        print('The sum:', a + b)
+        print('The Difference:', a - b)
+        print('The Product:', a * b)
+        print('The Average:', (a + b) / 2)
+        print()
+    calc(11, 22)
+
+f1()
+'''
+
+# Garbage Collection -> gc module
+import gc
+
+# checking gc status
+print('gc status check:',end=' ')
+print('Enabled!') if gc.isenabled() else print('Disabled!')
+
+# How to disable gc explicitly --> very rare
+gc.disable()
+print('gc status check:',end=' ')
+print('Enabled!') if gc.isenabled() else print('Disabled!')
+
+# How to disable gc explicitly --> by default enabled
+gc.enable()
+print('gc status check:',end=' ')
+print('Enabled!') if gc.isenabled() else print('Disabled!')
+
+# Destructor : Example
+import time
+class Test:
+    def __init__(self):
+        print('Initialization Activity...')
+
+    def __del__(self):
+        print('Performing Resource Deallocation and Cleanup Activities...')
+
+t = Test()
+time.sleep(6)
+print('End of Applicaiton')
+
+t1 = Test()
+t1 = None
+
+t2 = Test()
+del t2
+
+t3 = Test()
+time.sleep(6)
+print('Complete End of the Application')
