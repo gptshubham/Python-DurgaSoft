@@ -1188,6 +1188,7 @@ f1()
 '''
 
 # Garbage Collection -> gc module
+'''
 import gc
 
 # checking gc status
@@ -1203,8 +1204,10 @@ print('Enabled!') if gc.isenabled() else print('Disabled!')
 gc.enable()
 print('gc status check:',end=' ')
 print('Enabled!') if gc.isenabled() else print('Disabled!')
+'''
 
-# Destructor : Example
+# Destructor : Example 1
+'''
 import time
 class Test:
     def __init__(self):
@@ -1226,3 +1229,64 @@ del t2
 t3 = Test()
 time.sleep(6)
 print('Complete End of the Application')
+'''
+
+# Destructor Example 2 : Multiple Reference Variables of Single Object
+'''
+import time
+class Test:
+    def __init__(self):
+        print('Object initialization...')
+
+    def __del__(self):
+        print('Resource deallocation and cleanup activities...')
+
+t1 = Test()
+t2 = t1
+t3 = t2
+del t1
+time.sleep(10)
+print('object not destroyed even after deleting t1')
+del t2
+time.sleep(10)
+print('object not destroyed even after deleting t2 also')
+print('the last reference variable will be removed...now object is eligible for gc')
+del t3
+time.sleep(10)
+'''
+
+# Destructor Example 3 : List Object
+'''
+import time
+class Test:
+    def __init__(self):
+        print('Object initialization...')
+
+    def __del__(self):
+        print('Resource deallocation and cleanup activities...')
+
+L = [Test(),Test(),Test()]
+time.sleep(10)
+print('List no longer required...making it eligible for gc')
+del L
+time.sleep(10)
+print('End of Application')
+'''
+
+# How to find No. of Reference Variables of an Object
+'''
+class Test:
+    pass
+t1 = Test()
+t2 = t1
+t3 = t2
+print('No. of Ref. Variables:', sys.getrefcount(t3))
+del t1
+print('No. of Ref. Variables:', sys.getrefcount(t3))
+del t2
+print('No. of Ref. Variables:', sys.getrefcount(t3))
+del t3
+# print(sys.getrefcount(t3))
+# NameError: name 't3' is not defined
+'''
+

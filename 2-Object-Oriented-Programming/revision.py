@@ -26,6 +26,7 @@ print(s1 is s2)
 '''
 
 # Instance Variables
+'''
 class Test:
     def __init__(self):
         self.a = 10
@@ -47,4 +48,22 @@ t.c = 50
 print(t.__dict__)
 # accessing instance variables
 print(t.a,t.b,t.c)
+'''
+
+# Destructor
+import time
+class Test:
+    def __init__(self):
+        print('Object initialization...')
+
+    def __del__(self):
+        print('Resource deallocation and cleanup activities...')
+
+t1 = Test()
+t1=None
+t2 = Test()
+del t2
+t3 = Test()
+time.sleep(5)
+print('End of Application')
 
