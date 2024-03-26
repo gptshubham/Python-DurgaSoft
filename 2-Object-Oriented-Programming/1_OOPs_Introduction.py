@@ -1290,3 +1290,93 @@ del t3
 # NameError: name 't3' is not defined
 '''
 
+# Using Members of One Class inside Another Class
+
+# Has-A Relationship (Composition/Aggregation)
+# Composition --> Inner Class --> line 1015 to 1156
+# Aggregation --> Independent Class object creation inside another class
+
+# Example of Aggregation
+class Engine:
+    # Engine specific Functionality
+    def __init__(self):
+        self.power = '125kw'
+    def useEngine(self):
+        print('Engine Specific Functionality')
+
+class Car:
+    # Engine Functionality required
+    def __init__(self):
+        self.engine = Engine()
+
+    def useCar(self):
+        print('Car Require Engine Functionality')
+        self.engine.useEngine()
+        print(self.engine.power)
+
+# class car Has-A Engine Reference
+c = Car()
+c.useCar()
+
+# Example 2
+class Car:
+    def __init__(self,name,model,color):
+        self.name = name
+        self.model = model
+        self.color = color
+    def getInfo(self):
+        print(f'Name: {self.name} Model: {self.model} Color: {self.color}')
+
+class Employee:
+    def __init__(self,ename,eno,car):
+        self.ename = ename
+        self.eno = eno
+        self.car = car
+    def empInfo(self):
+        print(f'Employee Name: {self.ename}')
+        print(f'Employee Number: {self.eno}')
+        print(f'Employee Car Info:')
+        self.car.getInfo()
+
+c = Car('Innova', '2.5V', 'Grey')
+e = Employee('Shubham', 872425, c)
+e.empInfo()
+
+# Example 3:
+class SportsNews:
+    def __init__(self):
+        pass
+    def sportsInfo(self):
+        print('Sports News 1')
+        print('Sports News 2')
+        print('Sports News 3')
+
+class MovieNews:
+    def __init__(self):
+        pass
+    def movieInfo(self):
+        print('Movie News 1')
+        print('Movie News 2')
+        print('Movie News 3')
+
+class PoliticsNews:
+    def __init__(self):
+        pass
+    def politicsInfo(self):
+        print('Politics News 1')
+        print('Politics News 2')
+        print('Politics News 3')
+class ShubhNews:
+    def __init__(self):
+        self.sports = SportsNews()
+        self.movies = MovieNews()
+        self.politics = PoliticsNews()
+
+    def getTotalNews(self):
+        print('Welcome to Shubh News:')
+        self.sports.sportsInfo()
+        self.movies.movieInfo()
+        self.politics.politicsInfo()
+
+s = ShubhNews()
+s.getTotalNews()
