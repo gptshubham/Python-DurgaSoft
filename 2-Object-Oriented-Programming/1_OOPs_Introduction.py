@@ -1297,6 +1297,7 @@ del t3
 # Aggregation --> Independent Class object creation inside another class
 
 # Example of Aggregation
+'''
 class Engine:
     # Engine specific Functionality
     def __init__(self):
@@ -1317,8 +1318,10 @@ class Car:
 # class car Has-A Engine Reference
 c = Car()
 c.useCar()
+'''
 
 # Example 2
+'''
 class Car:
     def __init__(self,name,model,color):
         self.name = name
@@ -1341,8 +1344,10 @@ class Employee:
 c = Car('Innova', '2.5V', 'Grey')
 e = Employee('Shubham', 872425, c)
 e.empInfo()
+'''
 
 # Example 3:
+'''
 class SportsNews:
     def __init__(self):
         pass
@@ -1380,3 +1385,101 @@ class ShubhNews:
 
 s = ShubhNews()
 s.getTotalNews()
+'''
+
+# IS-A Relationship (Inheritance) --> Child Class
+# Inheritance Theoretical Example 1
+'''
+class P:
+    def m1(self):
+        print('m1 method')
+class C:
+    def m2(self):
+        print('m2 method')
+
+c = C()
+c.m2()
+# c.m1()
+# AttributeError: 'C' object has no attribute 'm1'. Did you mean: 'm2'?
+
+# How to Handle above AttributeError
+class P:
+    def m1(self):
+        print('m1 method')
+class C(P):
+    def m2(self):
+        print('m2 method')
+
+c = C()
+c.m2()
+c.m1()
+'''
+
+# Inheritance Theoretical Example 2
+'''
+class P:
+    a = 10
+    def __init__(self):
+        print('Parent Class Constructor')
+        self.b = 20
+    def m1(self):
+        print('Parent Class Instance Method')
+    @classmethod
+    def m2(cls):
+        print('Parent Class Class Method')
+    @staticmethod
+    def m3():
+        print('Parent Class Static Method')
+
+class C(P):
+    pass
+
+c = C()
+print(c.a)
+print(c.b)
+c.m1()
+c.m2()
+c.m3()
+'''
+
+# Inheritance Theoretical Example 3
+'''
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        self.a = 888
+        print('Address of self in Person:',id(self))
+
+    def eatndrink(self):
+        print('Eat Biryani and Drink Beer')
+class Employee(Person):
+    def __init__(self, name, age, eno, esal):
+        super().__init__(name, age)
+        self.name = name
+        self.age = age
+        self.eno = eno
+        self.esal = esal
+        print('Address of self in Employee:',id(self))
+    def work(self):
+        print('Coding Python....')
+    def empInfo(self):
+        print('Employee Name:',self.name)
+        print('Employee Age:',self.age)
+        print('Employee Number:',self.eno)
+        print('Employee Salary:',self.esal)
+
+e = Employee('Shubham',101,872425,20000)
+e.eatndrink()
+e.work()
+e.empInfo()
+# e.a
+# AttributeError: 'Employee' object has no attribute 'a'
+
+# How to Handle the above AttributeError --> super()
+print(e.a)
+print(e.__dict__)
+print(id(e))
+print('Address of e:',id(e))
+'''
+
