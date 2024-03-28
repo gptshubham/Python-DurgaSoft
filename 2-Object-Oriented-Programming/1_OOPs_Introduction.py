@@ -1483,3 +1483,92 @@ print(id(e))
 print('Address of e:',id(e))
 '''
 
+# Importance of Inheritance
+
+# Example : Loan Functionality
+# -> Home Loan
+# -> Car Loan
+# -> Personal Loan
+
+# without Inheritance
+'''
+class HomeLoan:
+    # 250 Methods
+    pass
+class CarLoan:
+    # 250 Methods
+    pass
+class PersonalLoan:
+    # 250 Methods
+    pass
+class LoanFunctionality:
+    def __init(self):
+        self.homeLoan = HomeLoan()
+        self.carLoan = CarLoan()
+        self.personalLoan = PersonalLoan()
+# total 750 methods defined
+'''
+
+# With Inheritance
+'''
+class Loan:
+    # 200 Common Methods
+    pass
+class HLoan(Loan):
+    # 50 Specific Methods
+    pass
+class CLoan(Loan):
+    # 50 Specific Methods
+    pass
+class PlLoan(Loan):
+    # 50 Specific Methods
+    pass
+# total 350 Methods defined
+'''
+# HAS-A vs IS-A Relationship --> Person , Employee , Car Class Example
+class Car:
+    def __init__(self,name,model,color):
+        self.name = name
+        self.model = model
+        self.color = color
+
+    def getInfo(self):
+        print(f'\tName: {self.name} \n\tModel: {self.model}, \n\tColor: {self.color}')
+
+class Person:
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+
+    def eatndrink(self):
+        print('Eating Pizza and Drinking Pepsi')
+
+class Employee(Person):
+    def __init__(self, name, age, eno, esal, car):
+        super().__init__(name,age)
+        self.eno = eno
+        self.esal = esal
+        self.car = car
+
+    @staticmethod
+    def work():
+        print('Python Coding based on the requirement')
+
+    def empinfo(self):
+        print('Employee Name:',self.name)
+        print('Employee Age:',self.age)
+        print('Employee Salary:',self.esal)
+        print('Employee No.:',self.eno)
+        print('Employee Car Info:')
+        self.car.getInfo()
+
+
+car = Car('Innova','2.5V','Grey')
+e = Employee('Shubham',22,767676,20000,car)
+
+e.empinfo()
+print(e.name)
+e.work()
+e.eatndrink()
+e.car.getInfo()
+
