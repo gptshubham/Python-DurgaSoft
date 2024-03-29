@@ -1525,7 +1525,9 @@ class PlLoan(Loan):
     pass
 # total 350 Methods defined
 '''
+
 # HAS-A vs IS-A Relationship --> Person , Employee , Car Class Example
+'''
 class Car:
     def __init__(self,name,model,color):
         self.name = name
@@ -1571,4 +1573,134 @@ print(e.name)
 e.work()
 e.eatndrink()
 e.car.getInfo()
+'''
 
+# Types of Inheritance (Very Very Important)
+
+# Single Inheritance --> Single Parent Class, Single Child Class
+class P:
+    def m1(self):
+        print('Parent Method')
+
+class C(P):
+    def m2(self):
+        print('Child Method')
+
+c = C()
+c.m1()
+c.m2()
+# Note: All the Inheritance Examples covered till now are Single Inheritance
+
+# Multi Level Inheritance
+# --> Multiple Parent Classes, Single Child Class (*****One After Another)
+class P:
+    def m1(self):
+        print('Parent Method')
+
+class C(P):
+    def m2(self):
+        print('Child Method')
+
+class CC(C):
+    def m3(self):
+        print('Sub Child Method')
+
+c = CC()
+c.m1()
+c.m2()
+c.m3()
+
+# Hierarchical Inheritance --> Single Parent, Multiple Child Classes (at every level)
+class P:
+    def m1(self):
+        print('Parent Method')
+
+class C1(P):
+    def m2(self):
+        print('Child1 Method')
+
+class C2(P):
+    def m3(self):
+        print('Child2 Method')
+
+c = C1()
+c.m1()
+c.m2()
+# c.m3()
+# AttributeError: 'C1' object has no attribute 'm3'.
+c = C2()
+c.m1()
+c.m3()
+# c.m2()
+# AttributeError: 'C2' object has no attribute 'm2'.
+
+# Multiple Inheritance
+# --> Multiple Parent Classes, Single Child Class (at a time)
+class P1:
+    def m1(self):
+        print('Parent1 Method')
+
+class P2:
+    def m2(self):
+        print('Parent2 Method')
+
+class C(P1,P2):
+    def m3(self):
+        print('Child Method')
+
+c = C()
+c.m1()
+c.m2()
+c.m3()
+
+# Note: Order is important in C(P1,P2)
+# Example 1 : Multiple Inheritance
+class P1:
+    def m1(self):
+        print('Parent1 Method')
+
+class P2:
+    def m1(self):
+        print('Parent2 Method')
+
+class C(P1,P2):
+    def m3(self):
+        print('Child Method')
+
+c = C()
+c.m1()
+
+# Example 2 : Multiple Inheritance
+class P1:
+    def m1(self):
+        print('Parent1 Method')
+
+class P2:
+    def m1(self):
+        print('Parent2 Method')
+
+class C(P2,P1):
+    def m3(self):
+        print('Child Method')
+
+c = C()
+c.m1()
+
+# Example 3 : Multiple Inheritance
+class P1:
+    def m1(self):
+        print('Parent1 Method')
+
+class P2:
+    def m1(self):
+        print('Parent2 Method')
+
+class C(P2,P1):
+    def m1(self):
+        print('Child Method')
+
+c = C()
+c.m1()
+
+# Hybrid Inheritance --> Combination of two or more types of inheritances
+# Cyclic Inheritance --> Not supported by any Programming Language
