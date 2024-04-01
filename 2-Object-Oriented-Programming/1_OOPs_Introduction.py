@@ -1578,6 +1578,7 @@ e.car.getInfo()
 # Types of Inheritance (Very Very Important)
 
 # Single Inheritance --> Single Parent Class, Single Child Class
+'''
 class P:
     def m1(self):
         print('Parent Method')
@@ -1590,9 +1591,11 @@ c = C()
 c.m1()
 c.m2()
 # Note: All the Inheritance Examples covered till now are Single Inheritance
+'''
 
 # Multi Level Inheritance
 # --> Multiple Parent Classes, Single Child Class (*****One After Another)
+'''
 class P:
     def m1(self):
         print('Parent Method')
@@ -1609,8 +1612,10 @@ c = CC()
 c.m1()
 c.m2()
 c.m3()
+'''
 
 # Hierarchical Inheritance --> Single Parent, Multiple Child Classes (at every level)
+'''
 class P:
     def m1(self):
         print('Parent Method')
@@ -1633,9 +1638,11 @@ c.m1()
 c.m3()
 # c.m2()
 # AttributeError: 'C2' object has no attribute 'm2'.
+'''
 
 # Multiple Inheritance
 # --> Multiple Parent Classes, Single Child Class (at a time)
+'''
 class P1:
     def m1(self):
         print('Parent1 Method')
@@ -1701,6 +1708,111 @@ class C(P2,P1):
 
 c = C()
 c.m1()
-
+'''
 # Hybrid Inheritance --> Combination of two or more types of inheritances
 # Cyclic Inheritance --> Not supported by any Programming Language
+
+# Method Resolution Order (MRO) and Hybrid Inheritance
+
+# Theoretical Example 1
+'''
+class A:
+    def m1(self):
+        print('A Class Method')
+    def m4(self):
+        print('A Class Method')
+class B(A):
+    def m1(self):
+        print('B Class Method')
+    def m2(self):
+        print('B Class Method')
+class C(A):
+    def m1(self):
+        print('C Class Method')
+    def m2(self):
+        print('C Class Method')
+    def m3(self):
+        print('C Class Method')
+class D(B,C):
+    def m1(self):
+        print('D Class Method')
+class E(C,B):
+    def m1(self):
+        print('E Class Method')
+
+print(A.mro())     # A,Object
+print(B.mro())     # B,A,Object
+print(C.mro())     # C,A,Object
+print(D.mro())     # D,B,C,A,Object
+print(E.mro())     # E,C,B,A,Object
+
+d = D()
+d.m1()
+d.m2()
+d.m3()
+d.m4()
+# d.m5()
+# AttributeError: 'D' object has no attribute 'm5'.
+'''
+
+# Theoretical Example 2
+'''
+class A:
+    def m1(self):
+        print('A Class Method')
+    def m3(self):
+        print('A Class Method')
+class B:
+    def m1(self):
+        print('B Class Method')
+    def m3(self):
+        print('B Class Method')
+class C:
+    def m1(self):
+        print('C Class Method')
+    def m3(self):
+        print('C Class Method')
+class X(A,B):
+    def m1(self):
+        print('X Class Method')
+    def m2(self):
+        print('X Class Method')
+class Y(B,C):
+    def m1(self):
+        print('Y Class Method')
+    def m2(self):
+        print('Y Class Method')
+class P(X,Y,C):
+    def m1(self):
+        print('P Class Method')
+
+print(A.mro())     # A,Object
+print(B.mro())     # B,Object
+print(C.mro())     # C,Object
+print(X.mro())     # X,A,B,Object
+print(Y.mro())     # Y,B,C,Object
+print(P.mro())     # P,X,A,Y,B,C,Object
+
+p = P()
+p.m1()
+p.m2()
+p.m3()
+'''
+
+# Theoretical Example 3
+'''
+class D:
+    pass
+class E:
+    pass
+class F:
+    pass
+class B(D,E):
+    pass
+class C(D,F):
+    pass
+class A(B,C):
+    pass
+print(A.mro())
+'''
+
