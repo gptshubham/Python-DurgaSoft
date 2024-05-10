@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9b48a1f-1e1e-42e4-8579-3c0395523580" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Python-DurgaSoft.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Python-DurgaSoft.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Revision-Round-1/ch1_Language_Fundamentals_Revision.py" beforeDir="false" afterPath="$PROJECT_DIR$/Revision-Round-1/ch1_Language_Fundamentals_Revision.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +37,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.1_OOPs_Introduction.executor": "Run",
+    "Python.2_Python_Data_Types.executor": "Run",
     "Python.ch1_Language_Fundamentals_Revision.executor": "Run",
     "Python.main.executor": "Run",
     "Python.revision.executor": "Run",
