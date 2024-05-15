@@ -96,12 +96,75 @@ print(10%3)
 a,b = 10,20
 x = 30 if a<b else 40
 print('x = ',x)
-'''
 # Example1 : Minimum Value
 a,b = 10,20
 print(f'minimum of a and b is {a if a<b else b}')
+'''
 
 # Nested Ternary Operator
+'''
 # Example 2 : Minimum of Three given Values
 a,b,c = 30,10,20
 print(f'Minimum of a, b and c is {a if a<b<c else b if b<c else c}')
+'''
+
+# Math Module
+
+# different ways to import a module
+'''
+import math
+print(math.sqrt(25))
+print(round(math.pi,2))
+
+import math as m
+print(m.sqrt(49))
+print(round(m.pi,2))
+
+from math import sqrt,pi
+print(sqrt(81))
+print(round(pi,2))
+'''
+
+# important functions of math module
+'''
+import math
+print(math.ceil(10.7))
+print(math.floor(10.7))
+print(math.pow(10,2))
+print(math.factorial(6))
+
+# dir()
+print(dir(math))
+
+from random import randint
+print(randint(0,10))
+print(randint(0,10))
+print(randint(0,10))
+print(randint(0,10))
+print(randint(0,10))
+print(randint(0,10))
+'''
+
+# Input and output Statements
+'''
+# reading dynamic input from keyboard
+fname = input("Enter your first name : ")
+mname = input("Enter your middle name : ")
+lname = input('Enter your last name : ')
+age = int(input('Enter your age : '))
+print(fname,mname,lname,age)
+
+# taking input form user and printing sum
+fnum = int(input('Enter first number : '))
+snum = int(input('Enter second number : '))
+print(f'The Sum of {fnum} and {snum} is {fnum + snum}')
+
+# eval()
+x = eval('10,20,30')
+print(x,type(x))
+
+# unpacking and assigning
+a,b,c = [10,20,30]
+print(a,b,c)
+'''
+
