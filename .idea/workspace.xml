@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d9b48a1f-1e1e-42e4-8579-3c0395523580" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Revision-Round-1/ch2_Operators_Revision.py" beforeDir="false" afterPath="$PROJECT_DIR$/Revision-Round-1/ch2_Operators_Revision.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,21 +33,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.1_OOPs_Introduction.executor&quot;: &quot;Run&quot;,
-    &quot;Python.2_Python_Data_Types.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ch1_Language_Fundamentals_Revision.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ch2_Operators_Revision.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.revision.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/shubham/Python-DurgaSoft/Python-DurgaSoft&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.1_OOPs_Introduction.executor": "Run",
+    "Python.2_Python_Data_Types.executor": "Run",
+    "Python.ch1_Language_Fundamentals_Revision.executor": "Run",
+    "Python.ch2_Operators_Revision.executor": "Run",
+    "Python.ch3_Flow_Control_Revision.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.revision.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/shubham/Python-DurgaSoft/Python-DurgaSoft",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
