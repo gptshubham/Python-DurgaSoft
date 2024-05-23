@@ -37,6 +37,7 @@
   "keyToString": {
     "Python.1_OOPs_Introduction.executor": "Run",
     "Python.2_Python_Data_Types.executor": "Run",
+    "Python.Python_Decorators.executor": "Run",
     "Python.ch1_Language_Fundamentals_Revision.executor": "Run",
     "Python.ch2_Operators_Revision.executor": "Run",
     "Python.ch3_Flow_Control_Revision.executor": "Run",
@@ -46,7 +47,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "/home/shubham/Python-DurgaSoft/Python-DurgaSoft",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.General"
   }
 }]]></component>
   <component name="SharedIndexes">
