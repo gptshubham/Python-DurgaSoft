@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d9b48a1f-1e1e-42e4-8579-3c0395523580" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3-Decorators-&amp;-Generators/Python_Decorators.py" beforeDir="false" afterPath="$PROJECT_DIR$/3-Decorators-&amp;-Generators/Python_Decorators.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +25,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/2-Object-Oriented-Programming/1_OOPs_Introduction.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/3-Decorators-&amp;-Generators/Python_Decorators.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -47,7 +49,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "/home/shubham/Python-DurgaSoft/Python-DurgaSoft",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.General"
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
 }]]></component>
   <component name="SharedIndexes">
