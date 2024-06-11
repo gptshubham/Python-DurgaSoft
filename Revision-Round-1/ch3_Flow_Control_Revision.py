@@ -154,6 +154,7 @@ else:
 '''
 
 # nested loops
+'''
 count = 0
 for i in range(5):
     for j in range(5):
@@ -161,3 +162,122 @@ for i in range(5):
         count += 1
 
 print(f'Total Number of Iterations = {count}')
+'''
+
+# Transfer Statements
+
+# Qsn: Which Loop will break in case of following Programs:
+'''
+for i in range(10):
+    for j in range(10):
+        if j == 5:
+            print('Loop Completed!')
+            break
+        print(i,j)
+'''
+'''
+for i in range(10):
+    for j in range(10):
+        if i == 5:
+            print('Loop Skipped!')
+            break
+        print(i,j)
+'''
+
+# continue
+# basic example
+'''
+for i in range(10):
+    if i == 5:
+        print('Loop Skipped!')
+        continue
+    print('order',end='')
+    print(' = ',end='')
+    print(i)
+'''
+
+# print only odd numbers between 1 and 20
+'''
+for num in range(1,20):
+    if num % 2 == 0: continue
+    print(num)
+'''
+
+# print table of n: (Although this code is expensive, still it's possible to do so.)
+'''
+n = int(input('Enter the Number: '))
+for num in range(1, (n*10) + 1):
+    if num % n != 0: continue
+    print(num)
+'''
+
+# Program : skipping ZeroDivisionError
+'''
+numbers = [10, 20, 0, 5, 0, 30]
+for number in numbers:
+    if number == 0:
+        print('dividing with zero leads to ZeroDivisionError!')
+        continue
+    else:
+        print('100/%d = %d' %(number, 100/number))
+        # this statement converts values into int resulting in data loss
+        # i,e; less precision and accuracy
+print('------------X-------------')
+'''
+# Alternatively : using try/except
+'''
+numbers = [10, 20, 0, 5, 0, 30]
+for number in numbers:
+    try:
+        print('100/{} = {}'.format(number, 100/number))
+    except:
+        print('dividing with zero leads to ZeroDivisionError!')
+'''
+
+# 1. for-else without break being executed.
+'''
+print('1. for-else without break being executed.')
+cart = [10, 20, 30, 40, 50]
+for item in cart:
+    if item >= 500:
+        print("We can't place this order without insurance!")
+        break
+    print('Processing Item', item)
+else:
+    print('Congrats...! All your items processed successfully!')
+'''
+
+# 2. for-else with break being executed.
+'''
+print('2. for-else with break being executed.')
+cart = [10,20,30,700,40,50]
+for item in cart:
+    if item >= 500:
+        print("We can't place this order without insurance!")
+        break
+    print('Processing Item',item)
+else:
+    print('Congrats...! All your items processed successfully!')
+'''
+
+# del
+'''
+s1 = 'shubham'
+s2 = s1
+s3 = s1
+print(s1,s2,s3)
+del s1
+print('s2 =',s2)
+print('s3 =',s3)
+# print('s1 =',s1)
+del s2,s3
+# print(s2)
+# print(s3)
+s1 = None
+print(s1)
+
+# deleting an item of string object
+s = 'shubham'
+print(s[0])
+# del s[0]
+'''
