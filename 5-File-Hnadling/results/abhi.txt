@@ -1,0 +1,6 @@
+Student Name: Abhi
+##################################################
+Python: 90
+Java: 90
+Oracle: 90
+Linux: 90
