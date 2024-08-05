@@ -218,7 +218,7 @@ f.close()
 
 # Reading character data from the files
 # --> read(), read(n), readline(), readlines()
-
+'''
 # reading entire data --> read()
 f = open('abc1.txt')
 print(f.read())
@@ -280,8 +280,10 @@ for line in l:
 f.close()
 print()
 # read() and readline() are mostly used methods
+'''
 
 # file pointer
+'''
 f = open('abc1.txt')
 print(f.read(3))
 print(f.read(5))
@@ -295,3 +297,132 @@ f2.write(data)
 print('The data copied successfully')
 f1.close()
 f2.close()
+'''
+
+# # with Statement
+#
+# with open('abc.txt') as f:
+#     print(f.read())
+#
+# # checking if the file is closed after with statement
+# with open('abc1.txt', 'w') as f:
+#     f.write('Dhoni\n')
+#     f.write('Kohli\n')
+#     f.write('Rohit\n')
+#     print('Is file closed: ', f.closed)
+# print('Is file closed: ', f.closed)
+#
+# # reading data written to the file
+# with open('abc1.txt') as f:
+#     print(f.read())
+
+
+# tell() and seek() Methods
+
+# tell()
+'''
+f = open('abc.txt')
+print(f.tell())
+print(f.read(5))
+print(f.tell())
+print()
+print(f.read())
+print(f.tell())
+f.close()
+
+f = open('abc1.txt', 'w')
+print(f.tell())
+f.close()
+
+f = open('abc2.txt', 'a')
+print(f.tell())
+f.close()
+
+f = open('abc1.txt','r+')
+print(f.tell())
+f.close()
+
+f = open('abc1.txt', 'w+')
+print(f.tell())
+f.close()
+
+f = open('abc.txt', 'a+')
+print(f.tell())
+f.close()
+'''
+
+# seek()
+'''
+f = open('abc1.txt')
+print(f.read(3))
+f.seek(0)
+print(f.read(3))
+f.seek(10)
+print(f.read(3))
+'''
+
+# data modification
+
+# with open('xyz.txt', 'r+') as f:
+#     text = f.read()
+#     print('Data before modification: ')
+#     print('#'*40)
+#     print(text)
+#     f.seek(17)
+#     f.write('GEMS!!!')
+#     f.seek(0)
+#     text = f.read()
+#     print('Data after modification: ')
+#     print('#' * 40)
+#     print(text)
+
+# How to check a particular file exists or not ?
+'''
+import os
+fname = input('Enter the File Name: ')
+filecheck = os.path.isfile(fname)
+if filecheck:
+    print(f'{fname} is available')
+else:
+    print(f'{fname} is not available')
+'''
+
+# write a program to check whether the given file exists or not.
+# if it's available then print it's content
+'''
+# importing os module
+import os
+# taking filename as input from the user
+fname = input('Enter the File Name: ')
+# checking if the file exists and storing the result in the filecheck variable
+filecheck = os.path.isfile(fname)
+# conditional statements to print output
+if not filecheck:
+    print(f'{fname} is not available!')
+else:
+    with open(fname) as f:
+        print(f.read())
+'''
+
+# Write a program to print the number of lines, words and characters
+# present in the given file?
+import os
+fname = input('Enter file name: ')
+fileckeck = os.path.isfile(fname)
+if not fileckeck:
+    print(f'{fname} is not available!')
+else:
+    with open(fname) as f:
+        # number of lines in the file
+        line_list = f.readlines()
+        line_count = len(line_list)
+        print(f'No. of Lines: {line_count}')
+        # number of words and characters in the file
+        char_count = 0
+        word_count = 0
+        for line in line_list:
+            char_count += len(line)
+            word_count += len(line.split())
+        print(f'No. of Words: {word_count}')
+        print(f'No. of Characters: {char_count}')
+

@@ -7,8 +7,9 @@
     <list default="true" id="d9b48a1f-1e1e-42e4-8579-3c0395523580" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/3-Decorators-&amp;-Generators/Python_Decorators.py" beforeDir="false" afterPath="$PROJECT_DIR$/3-Decorators-&amp;-Generators/Python_Decorators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5-File-Hnadling/abc.txt" beforeDir="false" afterPath="$PROJECT_DIR$/5-File-Hnadling/abc.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5-File-Hnadling/abc1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/5-File-Hnadling/abc1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/5-File-Hnadling/python_files.py" beforeDir="false" afterPath="$PROJECT_DIR$/5-File-Hnadling/python_files.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5-File-Hnadling/xyz.txt" beforeDir="false" afterPath="$PROJECT_DIR$/5-File-Hnadling/xyz.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +29,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/2-Object-Oriented-Programming/1_OOPs_Introduction.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/3-Decorators-&amp;-Generators/Python_Decorators.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/5-File-Hnadling/python_files.py" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -55,13 +57,20 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/shubham/Python-Pattern-Module&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-975db3bf15a3-31b6be0877a2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.18034.82" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.18034.82" />
+        <option value="bundled-python-sdk-975db3bf15a3-2767605e8bc2-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.18034.82" />
       </set>
     </attachedChunks>
   </component>
@@ -73,7 +82,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1709600823930</updated>
+      <workItem from="1722855455653" duration="10335000" />
+      <workItem from="1722867090929" duration="33000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Python_DurgaSoft$python_files.coverage" NAME="python_files Coverage Results" MODIFIED="1722865780674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/5-File-Hnadling" />
   </component>
 </project>
