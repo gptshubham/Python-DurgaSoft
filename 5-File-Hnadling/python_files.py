@@ -215,6 +215,7 @@ f = open('abc1.txt')
 print(f.read())
 f.close()
 """
+import csv
 
 # Reading character data from the files
 # --> read(), read(n), readline(), readlines()
@@ -406,6 +407,7 @@ else:
 
 # Write a program to print the number of lines, words and characters
 # present in the given file?
+'''
 import os
 fname = input('Enter file name: ')
 fileckeck = os.path.isfile(fname)
@@ -425,4 +427,91 @@ else:
             word_count += len(line.split())
         print(f'No. of Words: {word_count}')
         print(f'No. of Characters: {char_count}')
+
+'''
+
+# Hndling Binary Data --> Not recommended to use in the real world
+'''
+f1 = open('download.jpeg','rb')
+f2 = open('dog1.jpeg','wb')
+# f2.write(f1.read())
+data = f1.read()  # bytes
+# print(type(data))
+f2.write(data)
+print('New Image is available with the name: dog1.jpeg')
+'''
+
+# Handling CSV Files --> Very common requirement in real time
+# However, Pandas Library is used extensively in real time
+
+# writing data to the csv file:
+'''
+import csv
+with open('emp.csv','w') as f:
+    w = csv.writer(f)
+    w.writerow(['ENO', 'ENAME', 'ESAL', 'EADDR'])
+    w.writerow([100,'shubham',1000,'Kolkata'])
+    w.writerow([100,'shubham',1000,'Kolkata'])
+    w.writerow([100,'shubham',1000,'Kolkata'])
+    w.writerow([100,'shubham',1000,'Kolkata'])
+print('data written successfully')
+'''
+
+# read data from the enduser and write that data to the csv file
+'''
+import csv
+with open('emp.csv','w') as f:
+    w = csv.writer(f)
+    w.writerow(['ENO', 'ENAME', 'ESAL', 'EADDR'])
+    while True:
+        eno = input('Enter Employee Number: ')
+        ename = input('Enter Employee Name: ')
+        esal = input('Enter Employee Salary: ')
+        eaddr = input('Enter Employee Address: ')
+        w.writerow([eno, ename, esal, eaddr])
+        print('Record inserted successfully')
+        option = input("more records? ['Yes'|'No']: ")
+        if option.lower() == 'no':
+            break
+print('data written to the file successfully')
+'''
+
+# How to read data from a csv file
+'''
+import csv
+with open('emp.csv') as f:
+    r = csv.reader(f)
+    # print(r)
+    # print(type(r))
+    data = list(r)
+    print(data)
+    for row in data:
+        for col in row:
+            print(col,'\t',end='')
+        print()
+'''
+
+# Zipping and Unzipping Files
+'''
+# Creating Zip File
+from zipfile import *
+f = ZipFile('marks.zip','w',ZIP_DEFLATED)
+f.write('abhi.txt')
+f.write('shubham.txt')
+f.write('sonal.txt')
+f.close()
+print('marks.zip file created successfully')
+
+# Unzipping a Zipped File
+f = ZipFile('marks.zip','r',ZIP_STORED)  # ZIP_STORED is default value
+names = f.namelist()
+# print(names)
+for name in names:
+    print('File Name: ',name)
+    print('The Content of the file is: ')
+    f1 = open(name,'r')
+    print(f1.read())
+    f1.close()
+    print()
+'''
 

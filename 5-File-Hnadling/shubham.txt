@@ -1,0 +1,6 @@
+Student Name: Shubham
+########################################
+Python: 100
+Java: 80
+Oracle: 90
+Linux: 70

@@ -1,0 +1,6 @@
+Student Name: Sonal
+########################################
+Python: 80
+Java: 80
+Oracle: 80
+Linux: 80
