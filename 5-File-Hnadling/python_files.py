@@ -515,3 +515,108 @@ for name in names:
     print()
 '''
 
+# Working with Directories
+import os
+
+# # 1. to know current working directory
+# pwd = os.getcwd()
+# print(pwd)
+
+# # 2A. To create new directory in the cwd
+# os.mkdir('my_directory')
+# print('Directory Created')
+# # os.mkdir('my_directory')
+# # FileExistsError
+
+# # 2B. To create new directory in a specified directory present in cwd --> using relative path
+# os.mkdir('my_directory\\inside_my_directory')
+# print('Directory Created')
+
+# # 2C. To create new directory in a specified directory not present in cwd --> using absolute path
+# os.mkdir('C:\\Shubham\\Durgasoft\\Python\\Revision-Round-1\\my_directory')
+# print('Directory Created')
+
+# # 2D. To Create multiple directories simultaneously
+# os.makedirs('Dir1/Dir2/Dir3/Dir4')
+# print('Task completed successfully.')
+
+# # 3A. To remove an existing directory
+# os.rmdir('Dir1/Dir2/Dir3/Dir4')
+# print('Task completed successfully.')
+# # only 1 directory is removed at a time
+
+# # 3B. To remove multiple directories simultaneously
+# os.removedirs('Dir1/Dir2/Dir3')
+# print('Task completed successfully.')
+
+# # 4. To rename a directory
+# os.rename('python_directory','my_directory_1')
+# print('Directory renamed successfully.')
+
+# 5. To know contents of directory
+'''
+files = os.listdir('C:/Shubham/Durgasoft/Python')
+print(files)
+print(f'The number of files and directories in the Python folder: {len(files)}')
+print()
+
+print('Files in the Python folder: ')
+for file in files:
+    print(file)
+print()
+'''
+
+# 6. To include the contents of Sub-directories as well
+'''
+files = os.walk('.')
+print(files)  # <generator object walk at 0x000001978A1FF9C0>
+print()
+
+# for file in files:
+#     print(file)
+# # Too many output: makes no sense
+
+for dirpath, dirnames, filenames in files:
+    print('Current Directory Path: ', dirpath)
+    print('Directories: ', dirnames)
+    print('Files: ', filenames)
+    print()
+'''
+
+# To know information about a file
+'''
+statistics = os.stat('abc.txt')
+print(statistics)
+print()
+
+# To print some required properties
+print(f'File size in byter: {statistics.st_size}')
+print(f'File last modified time: {statistics.st_mtime}')
+
+# How to convert epoch time to Human Understandable form
+from datetime import *
+print(f'File last modified time: {datetime.fromtimestamp(statistics.st_mtime)}')
+print()
+'''
+
+# Running other programs from Python Program:
+'''
+# os.system("dir")
+
+os.system("dir *.py")
+print()
+
+# os.system('calc')
+
+# os.system("notepad")
+print('python_files.py starts executing demo.py')
+os.system('py demo.py')
+print('execution of demo.py completed')
+
+# # executing Java file using python --> doesn't work (jdk need to be installed in our system)
+# print('python_files.py starts compiling Java Program')
+# os.system('javac demo.java')
+# print('python_files.py starts executing Java Program')
+# os.system('java demo')
+# print('execution of demo.java completed')
+'''
